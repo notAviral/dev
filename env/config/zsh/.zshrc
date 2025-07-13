@@ -106,17 +106,13 @@ git log --graph --all --decorate --date=iso --pretty=format:"%C(auto)%h%Creset %
 eval "$(fzf --zsh)"
 
 # Starship prompt
-eval "$(starship init zsh)"
+eval "$(starship init zsh)" 
 
 # --------------------------------------
 # Optional: Background fastfetch 
 # --------------------------------------
 
-if [ -z "$TMUX" ]; then
-  (fastfetch &)
+if [[ -z "$TMUX" && -f "$HOME/.config/fastfetch" ]]; then
+  (fastfetch &) 
 fi
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"

@@ -17,14 +17,14 @@ return
                 block = 'gb',
             },
             ---LHS of extra mappings
-            extra = {
-                ---Add comment on the line above
-                above = 'gcO',
-                ---Add comment on the line below
-                below = 'gco',
-                ---Add comment at the end of line
-                eol = 'gcA',
-        }
+            -- extra = { 
+            --     ---Add comment on the line above
+            --     above = 'gcO',
+            --     ---Add comment on the line below
+            --     below = 'gco',
+            --     ---Add comment at the end of line
+            --     eol = 'gcA',
+        -- }
       })
     end
 }
