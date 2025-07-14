@@ -1,8 +1,12 @@
 [config]
+generate_terminal = true
+
+[wallpaper]
+set = true
+command = "gsettings set org.gnome.desktop.background"
 
 [templates.kitty]
 input_path = "./templates/kitty.conf"
 output_path = "~/.config/kitty/colors-matugen.conf"
 post_hook = "pkill -SIGUSR1 -x kitty"
-
 
