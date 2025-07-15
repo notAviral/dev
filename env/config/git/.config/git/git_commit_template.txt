@@ -1,0 +1,25 @@
+# Header :
+
+
+# Description :
+
+
+# Footer (optional) : 
+
+
+
+# Format : 
+# <type> (<scope>) : <short summary>
+# Explain *what a commit does* not what you did,
+# example : using imperative language like: 
+#           "fix bugs" not "fixed bugs"
+# Describe *what* you changed and *why*
+
+# Use one of the following types :
+# feat ()     - adding removing or upgrading a feature,
+# fix ()      - fixing some code (bugs or issues),
+# refactor () - refafctoring codebase
+# chore ()    - fixing structures, upadating depends, etc,
+# test ()     - anything related to tests,
+# ci ()       - for continuous integrations,
+
