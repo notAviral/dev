@@ -1,0 +1,30 @@
+# User Configs :
+
+# this is to upload my git config to GitHub wiithout
+# worrying about my personal stuff
+[include]
+  path = "./config_personal"
+
+# Machine Config :
+[core]
+  compression = 9
+  editor = nvim
+  preloadindex = true
+
+# Commit Template :
+[commit]
+  template = "./git_commit_template.txt"
+
+# Personal Preferences :
+[init]
+  defaultBranch = main
+
+# Functionality configs :
+[include]
+  path = "./opts_config"
+
+# Custom URLs :
+[url "git@github.com:MadMonkDev/"]
+  insteadOf = "mmd:"
+[url "git@github.com:"]
+  insteadOf = "gh:"

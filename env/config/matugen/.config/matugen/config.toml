@@ -2,8 +2,9 @@
 generate_terminal = true
 
 [wallpaper]
+command = "swww"
+arguments = ["img"]
 set = true
-command = "gsettings set org.gnome.desktop.background"
 
 [templates.kitty]
 input_path = "./templates/kitty.conf"
