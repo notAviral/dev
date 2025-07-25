@@ -13,7 +13,7 @@
 
 # Commit Template :
 [commit]
-  template = "./git_commit_template.txt"
+  template = "~/.config/git/git_commit_template.txt"
 
 # Personal Preferences :
 [init]

@@ -22,7 +22,9 @@ return {
 					"phpactor",
 					"opencl_ls",
 					"glsl_analyzer",
-          "clangd"
+          "clangd",
+          "pyright",
+          "basedpyright"
 				},
 			})
 		end,
@@ -45,6 +47,8 @@ return {
 			lspconfig.opencl_ls.setup({ capabilities = capabilities })
 			lspconfig.glsl_analyzer.setup({ capabilities = capabilities })
 			lspconfig.clangd.setup({ capabilities = capabilities })
+			lspconfig.pyright.setup({ capabilities = capabilities })
+			lspconfig.basedpyright.setup({ capabilities = capabilities })
 			lspconfig.zls.setup({ capabilities = capabilities })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "sd", vim.lsp.buf.definition, {})
