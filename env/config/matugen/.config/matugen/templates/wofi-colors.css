@@ -1,0 +1,110 @@
+/* Dark theme as default */
+:root {
+    /* Primary Colors */
+    --primary: {{colors.primary.dark.hex}};
+    --on-primary: {{colors.on_primary.dark.hex}};
+    --primary-container: {{colors.primary_container.dark.hex}};
+    --on-primary-container: {{colors.on_primary_container.dark.hex}};
+    
+    /* Secondary Colors */
+    --secondary: {{colors.secondary.dark.hex}};
+    --on-secondary: {{colors.on_secondary.dark.hex}};
+    --secondary-container: {{colors.secondary_container.dark.hex}};
+    --on-secondary-container: {{colors.on_secondary_container.dark.hex}};
+    
+    /* Tertiary Colors */
+    --tertiary: {{colors.tertiary.dark.hex}};
+    --on-tertiary: {{colors.on_tertiary.dark.hex}};
+    --tertiary-container: {{colors.tertiary_container.dark.hex}};
+    --on-tertiary-container: {{colors.on_tertiary_container.dark.hex}};
+    
+    /* Surface Colors */
+    --surface: {{colors.surface.dark.hex}};
+    --on-surface: {{colors.on_surface.dark.hex}};
+    --surface-variant: {{colors.surface_variant.dark.hex}};
+    --on-surface-variant: {{colors.on_surface_variant.dark.hex}};
+    --surface-container: {{colors.surface_container.dark.hex}};
+    --surface-container-high: {{colors.surface_container_high.dark.hex}};
+    --surface-container-highest: {{colors.surface_container_highest.dark.hex}};
+    --surface-container-low: {{colors.surface_container_low.dark.hex}};
+    --surface-container-lowest: {{colors.surface_container_lowest.dark.hex}};
+    --surface-bright: {{colors.surface_bright.dark.hex}};
+    --surface-dim: {{colors.surface_dim.dark.hex}};
+    
+    /* Background Colors */
+    --background: {{colors.background.dark.hex}};
+    --on-background: {{colors.on_background.dark.hex}};
+    
+    /* Outline Colors */
+    --outline: {{colors.outline.dark.hex}};
+    --outline-variant: {{colors.outline_variant.dark.hex}};
+    
+    /* Error Colors */
+    --error: {{colors.error.dark.hex}};
+    --on-error: {{colors.on_error.dark.hex}};
+    --error-container: {{colors.error_container.dark.hex}};
+    --on-error-container: {{colors.on_error_container.dark.hex}};
+    
+    /* Additional Colors */
+    --shadow: {{colors.shadow.dark.hex}};
+    --scrim: {{colors.scrim.dark.hex}};
+    --inverse-surface: {{colors.inverse_surface.dark.hex}};
+    --inverse-on-surface: {{colors.inverse_on_surface.dark.hex}};
+    --inverse-primary: {{colors.inverse_primary.dark.hex}};
+    
+    /* Custom Wofi-specific colors */
+    --wofi-bg: var(--surface-container);
+    --wofi-border: var(--outline);
+    --wofi-text: var(--on-surface);
+    --wofi-selected: var(--secondary-container);
+    --wofi-selected-text: var(--on-secondary-container);
+}
+
+/* Light theme override (switched via data attribute) */
+:root[data-theme="light"] {
+    /* Primary Colors */
+    --primary: {{colors.primary.light.hex}};
+    --on-primary: {{colors.on_primary.light.hex}};
+    --primary-container: {{colors.primary_container.light.hex}};
+    --on-primary-container: {{colors.on_primary_container.light.hex}};
+    
+    /* Secondary Colors */
+    --secondary: {{colors.secondary.light.hex}};
+    --on-secondary: {{colors.on_secondary.light.hex}};
+    --secondary-container: {{colors.secondary_container.light.hex}};
+    --on-secondary-container: {{colors.on_secondary_container.light.hex}};
+    
+    /* Surface Colors */
+    --surface: {{colors.surface.light.hex}};
+    --on-surface: {{colors.on_surface.light.hex}};
+    --surface-variant: {{colors.surface_variant.light.hex}};
+    --on-surface-variant: {{colors.on_surface_variant.light.hex}};
+    --surface-container: {{colors.surface_container.light.hex}};
+    --surface-container-high: {{colors.surface_container_high.light.hex}};
+    --surface-container-highest: {{colors.surface_container_highest.light.hex}};
+    --surface-container-low: {{colors.surface_container_low.light.hex}};
+    --surface-container-lowest: {{colors.surface_container_lowest.light.hex}};
+    --surface-bright: {{colors.surface_bright.light.hex}};
+    --surface-dim: {{colors.surface_dim.light.hex}};
+    
+    /* Background Colors */
+    --background: {{colors.background.light.hex}};
+    --on-background: {{colors.on_background.light.hex}};
+    
+    /* Outline Colors */
+    --outline: {{colors.outline.light.hex}};
+    --outline-variant: {{colors.outline_variant.light.hex}};
+    
+    /* Error Colors */
+    --error: {{colors.error.light.hex}};
+    --on-error: {{colors.on_error.light.hex}};
+    --error-container: {{colors.error_container.light.hex}};
+    --on-error-container: {{colors.on_error_container.light.hex}};
+    
+    /* Additional Colors */
+    --shadow: {{colors.shadow.light.hex}};
+    --scrim: {{colors.scrim.light.hex}};
+    --inverse-surface: {{colors.inverse_surface.light.hex}};
+    --inverse-on-surface: {{colors.inverse_on_surface.light.hex}};
+    --inverse-primary: {{colors.inverse_primary.light.hex}};
+}

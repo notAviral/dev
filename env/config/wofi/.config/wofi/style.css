@@ -1,0 +1,174 @@
+@import url("colors.css");
+
+/* ----------------------------------------
+ * Wofi Style using Matugen Colors - Fixed
+ * ---------------------------------------- */
+
+* {
+    font-family: "Inter", "Noto Sans", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------
+ * Main Window
+ * ---------------------------------------- */
+window {
+    background-color: var(--wofi-bg);
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: var(--wofi-text);
+    opacity: 0.98;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* ----------------------------------------
+ * Input Field
+ * ---------------------------------------- */
+#input {
+    all: unset;
+    background-color: var(--surface-container-high);
+    border: 2px solid var(--wofi-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 8px;
+    color: var(--wofi-text);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+#input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-container);
+}
+
+/* ----------------------------------------
+ * Scrollbar
+ * ---------------------------------------- */
+#scroll {
+    background-color: transparent;
+    border: none;
+    margin: 0 8px 8px 8px;
+}
+
+/* ----------------------------------------
+ * Outer Box
+ * ---------------------------------------- */
+#outer-box {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------------
+ * Inner Box
+ * ---------------------------------------- */
+#inner-box {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------------
+ * Entry Items
+ * ---------------------------------------- */
+#entry {
+    all: unset;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 2px 8px;
+    color: var(--wofi-text);
+    transition: all 0.15s ease;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#entry:hover {
+    background-color: var(--surface-container-high);
+}
+
+#entry:selected {
+    background-color: var(--wofi-selected);
+    color: var(--wofi-selected-text);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#entry:selected:hover {
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
+
+/* ----------------------------------------
+ * Entry Images/Icons
+ * ---------------------------------------- */
+#entry image {
+    border-radius: 6px;
+    margin-right: 12px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+#entry:hover image {
+    transform: scale(1.02);
+}
+
+#entry:selected image {
+    transform: scale(1.05);
+}
+
+/* ----------------------------------------
+ * Entry Text
+ * ---------------------------------------- */
+#entry label {
+    color: inherit;
+    font-weight: inherit;
+    font-size: 14px;
+}
+
+/* ----------------------------------------
+ * Text Widget
+ * ---------------------------------------- */
+#text {
+    color: var(--wofi-text);
+    font-size: 14px;
+}
+
+#entry:selected #text {
+    color: var(--wofi-selected-text);
+}
+
+/* ----------------------------------------
+ * No Results Message
+ * ---------------------------------------- */
+#no-results {
+    color: var(--on-surface-variant);
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--surface-container);
+    border-radius: 8px;
+    margin: 8px;
+}
+
+/* ----------------------------------------
+ * Animations
+ * ---------------------------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

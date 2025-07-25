@@ -74,8 +74,7 @@ setopt hist_find_no_dups
 # --------------------------------------
 
 # Common Aliases :
-alias ll='ls --color -lart'
-alias ls='exa -la'
+alias ll='exa -la'
 alias vim='nvim'
 alias c='clear'
 alias v='nvim'

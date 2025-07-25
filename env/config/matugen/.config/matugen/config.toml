@@ -1,5 +1,8 @@
+
 [config]
 generate_terminal = true
+reload_apps = true
+set_wallpaper = false
 
 [wallpaper]
 command = "swww"
@@ -11,3 +14,11 @@ input_path = "./templates/kitty.conf"
 output_path = "~/.config/kitty/colors-matugen.conf"
 post_hook = "pkill -SIGUSR1 -x kitty"
 
+[templates.wofi]
+input_path = "./templates/wofi-colors.css"
+output_path = "~/.config/wofi/colors.css"
+
+[templates.waybar]
+input_path = "./templates/waybar.css"
+output_path = "~/.config/waybar/colors.css"
+post_hook = "pkill -SIGUSR1 -x waybar"
