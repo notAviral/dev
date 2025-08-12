@@ -84,6 +84,7 @@ alias nf='fastfetch'
 alias ff='fastfetch'
 
 # Git Aliases:
+alias lg='lazygit'
 alias gd='git diff'
 alias gs='git status'
 alias ga='git add'

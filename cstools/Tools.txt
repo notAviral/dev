@@ -1,0 +1,5 @@
+
+## Names of all the Tools :
+1. Spiderfoot           -       OSINT automation tool,
+2. Snort                -       Best Network Intrusion Detection System,
+
