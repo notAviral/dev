@@ -1,0 +1,12 @@
+{
+    "nvim" : {
+        "ripgrep", // for telescope
+        "curl", // for mason
+        "wget",
+        "git",
+        "unzip",
+        "tar",
+        "gzip",
+        "nodejs", // for lsp config
+    }
+}
