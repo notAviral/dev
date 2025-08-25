@@ -24,7 +24,7 @@
   path = "./opts_config"
 
 # Custom URLs :
-[url "git@github.com:MadMonkDev/"]
-  insteadOf = "mmd:"
+[url "git@github.com:Kernav/"]
+  insteadOf = "kav:"
 [url "git@github.com:"]
   insteadOf = "gh:"
