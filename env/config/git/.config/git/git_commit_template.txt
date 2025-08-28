@@ -1,25 +1,88 @@
-# Header :
+# MAIN HEADER
+# <type>[optional scope]: <description>
 
+# BODY [optional]
 
-# Description :
+# FOOTER(s) [optional]
 
-
-# Footer (optional) : 
-
-
-
-# Format : 
-# <type> (<scope>) : <short summary>
-# Explain *what a commit does* not what you did,
-# example : using imperative language like: 
-#           "fix bugs" not "fixed bugs"
-# Describe *what* you changed and *why*
-
-# Use one of the following types :
-# feat ()     - adding removing or upgrading a feature,
-# fix ()      - fixing some code (bugs or issues),
-# refactor () - refafctoring codebase
-# chore ()    - fixing structures, upadating depends, etc,
-# test ()     - anything related to tests,
-# ci ()       - for continuous integrations,
-
+# --------------------------------------------------------------------------
+# COMMIT MESSAGE GUIDELINES
+# --------------------------------------------------------------------------
+#
+# HEADER (Required - Max 50 characters)
+# Format: <type>[optional scope]: <description>
+#
+# Types (choose one):
+#   feat     - New feature for the user
+#   fix      - Bug fix for the user
+#   docs     - Documentation changes
+#   style    - Code style changes (formatting, missing semicolons, etc)
+#   refactor - Code change that neither fixes a bug nor adds a feature
+#   perf     - Performance improvements
+#   test     - Adding or updating tests
+#   build    - Changes to build system or external dependencies
+#   ci       - Changes to CI configuration files and scripts
+#   chore    - Other changes that don't modify src or test files
+#   revert   - Reverts a previous commit
+#
+# Scope (optional):
+#   - Component, module, or area affected (e.g., auth, api, ui, database)
+#   - Use lowercase, no spaces
+#   - Examples: (auth), (api), (ui), (database), (config)
+#
+# Description:
+#   - Use imperative mood ("add" not "added" or "adds")
+#   - Start with lowercase letter
+#   - No period at the end
+#   - Clearly state what the commit does
+#
+# Examples:
+#   feat(auth): add OAuth2 login support
+#   fix(api): resolve memory leak in user service
+#   docs: update README with installation instructions
+#   style(ui): format button components according to style guide
+#   refactor(database): simplify user query logic
+#
+# BODY (Optional - Wrap at 72 characters)
+# - Separate from header with blank line
+# - Explain WHAT and WHY, not HOW
+# - Include motivation for the change and contrast with previous behavior
+# - Use imperative mood
+# - Can include multiple paragraphs
+#
+# FOOTER (Optional)
+# - Separate from body with blank line
+# - Used for:
+#   * Breaking changes: BREAKING CHANGE: <description>
+#   * Issue references: Closes #123, Fixes #456, Refs #789
+#   * Co-authors: Co-authored-by: Name <email@example.com>
+#   * Reviewers: Reviewed-by: Name <email@example.com>
+#
+# Examples:
+#   BREAKING CHANGE: remove deprecated getUserById method
+#   Closes #123
+#   Co-authored-by: Jane Doe <jane@example.com>
+#
+# --------------------------------------------------------------------------
+# BEST PRACTICES
+# --------------------------------------------------------------------------
+# ✅ DO:
+#   - Keep header under 50 characters
+#   - Use present tense, imperative mood
+#   - Reference issues and pull requests when relevant
+#   - Explain the "why" behind the change in the body
+#   - Use consistent formatting
+#
+# ❌ DON'T:
+#   - End header with a period
+#   - Use past tense ("fixed" instead of "fix")
+#   - Include implementation details in the header
+#   - Make commits too large (one logical change per commit)
+#   - Use vague descriptions like "update code" or "fix stuff"
+#
+# --------------------------------------------------------------------------
+# CONVENTIONAL COMMITS COMPLIANCE
+# --------------------------------------------------------------------------
+# This template follows the Conventional Commits specification v1.0.0
+# Learn more: https://www.conventionalcommits.org/
+# --------------------------------------------------------------------------
