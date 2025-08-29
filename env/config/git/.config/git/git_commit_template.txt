@@ -1,9 +1,10 @@
-# MAIN HEADER
+# Main Header :
+
 # <type>[optional scope]: <description>
+# Body [optional] :
 
-# BODY [optional]
+# Footer(s) [optional] :
 
-# FOOTER(s) [optional]
 
 # --------------------------------------------------------------------------
 # COMMIT MESSAGE GUIDELINES
