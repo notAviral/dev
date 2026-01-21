@@ -22,5 +22,5 @@ function on {
     fi
 }
 
-alias of='cd $HOME/Notes/ZettelKasten/'
+alias oo='cd $HOME/Notes/'
 alias or='nvim $HOME/Notes/Inbox/*.md'

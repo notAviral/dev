@@ -1,18 +1,20 @@
 --[[
--- This is my main Neovim config 
+-- This is my main Neovim config
 -- author - Aviral Dubey
 --]]
 
 -- Importing the options :
-require ("core.opts")
+require("core.opts")
 
 -- Installing and Sourcing Lazy Pluggin Manager :
-require ("core.lazy")
-require "core.messages"
+require("core.lazy")
 
 -- Importing keybinds :
-require ("core.keybinds")
-require ("Plugins.keybinds")
+require("Plugins.keybinds")
+require("core.keybinds")
 
--- Importing Colorschemes : 
-require ("core.colorscheme")
+-- Importing Colorschemes :
+require("core.colorscheme")
+
+-- Importing Extra Modules :
+require("core.extras")
