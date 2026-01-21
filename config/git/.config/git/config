@@ -22,9 +22,3 @@
 # Functionality configs :
 [include]
   path = "./opts_config"
-
-# Custom URLs :
-[url "git@github.com:Kernav/"]
-  insteadOf = "kav:"
-[url "git@github.com:"]
-  insteadOf = "gh:"

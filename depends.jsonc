@@ -8,5 +8,6 @@
         "tar",
         "gzip",
         "nodejs", // for lsp config
+        "npm"
     }
 }

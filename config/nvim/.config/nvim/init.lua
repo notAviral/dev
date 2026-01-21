@@ -8,6 +8,7 @@ require ("core.opts")
 
 -- Installing and Sourcing Lazy Pluggin Manager :
 require ("core.lazy")
+require "core.messages"
 
 -- Importing keybinds :
 require ("core.keybinds")

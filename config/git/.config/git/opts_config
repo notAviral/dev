@@ -1,54 +1,57 @@
 
 [status]
-  branch = true
-  showStash = true
+branch = true
+showStash = true
 
 [push]
-  autoSetupRemote = true
-  default = current
-  followTags = true
+autoSetupRemote = true
+default = current
+followTags = true
 
 [pull]
-  defualt = true
-  rebase = true
+defualt = true
+rebase = true
+
+[submodule]
+recurse = true
 
 [rebase]
-  autoStash = true
-  missingCommitsCheck = warn
+autoStash = true
+missingCommitsCheck = warn
 
 [log]
-  abbrevCommit = true
-  graphColor = blue,yellow,cyan,magenta,green,red
+abbrevCommit = true
+graphColor = blue,yellow,cyan,magenta,green,red
 
 [color "decorate"]
-  HEAD = red
-  branch = blue 
-  tag = yellow
-  remoteBranch = magenta
+HEAD = red
+branch = blue 
+tag = yellow
+remoteBranch = magenta
 
 [branch]
-  sort = -committerdate
+sort = -committerdate
 
 [tag]
-  sort = -taggerdate
+sort = -taggerdate
 
 [interactive]
-  diffFilter = diff-so-fancy --patch
-  singlekey = true
+diffFilter = diff-so-fancy --patch
+singlekey = true
 
 [diff]
-  context = 3
-  renames = copies
-  interHunkContext = 10
+context = 3
+renames = copies
+interHunkContext = 10
 
 [color "diff"]
-  meta = black bold
-  frag = magenta
-  context = white
-  whitespace = yellow reverse
-  old = red
+meta = black bold
+frag = magenta
+context = white
+whitespace = yellow reverse
+old = red
 
 [pager]
-  markEmptyLines = false
-  branch = false
-  tag = false
+markEmptyLines = false
+branch = false
+tag = false
