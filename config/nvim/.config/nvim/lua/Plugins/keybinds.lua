@@ -44,33 +44,46 @@ set("v", "<leader>cd", ":CopilotChatDocs<CR>", { desc = "Generate Documentation"
 set("v", "<leader>ct", ":CopilotChatTests<CR>", { desc = "Generate Tests" })
 set("n", "<leader>cm", ":CopilotChatCommit<CR>", { desc = "Generate Messages" })
 
--- ========================================
 -- Obsidian Keybinds
--- ========================================
+local obsidian = require("obsidian")
 
--- Search & Navigation
-set("n", "<leader>of", "<cmd>ObsidianQuickSwitch<cr>", { desc = "Obsidian: Find notes" })
-set("n", "<leader>og", "<cmd>ObsidianSearch<cr>", { desc = "Obsidian: Grep notes" })
-set("n", "<leader>ol", "<cmd>ObsidianFollowLink<cr>", { desc = "Obsidian: Follow link" })
-set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "Obsidian: Backlinks" })
+set("n", "<leader>on", "<cmd>Obsidian new<cr>", { desc = "Obsidian: New note (Inbox)" })
+set("n", "<leader>os", "<cmd>Obsidian quick_switch<cr>", { desc = "Obsidian: Find notes" })
+set("n", "<leader>og", "<cmd>Obsidian search<cr>", { desc = "Obsidian: Grep notes" })
+set("n", "<leader>od", "<cmd>Obsidian today<cr>", { desc = "Obsidian: Today's note" })
 
--- Note Management
-set("n", "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "Obsidian: New note (Inbox)" })
-set("n", "<leader>ot", "<cmd>ObsidianTemplate<cr>", { desc = "Obsidian: Insert template" })
-set("n", "<leader>or", "<cmd>ObsidianRename<cr>", { desc = "Obsidian: Rename note" })
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*.md",
+	callback = function(args)
+		local buf = args.buf
+		local file = vim.api.nvim_buf_get_name(buf)
 
--- Inbox Workflow
-set("n", "<leader>ok", "<cmd>lua obsidian_keep_note()<cr>", { desc = "Obsidian: Keep (move to ZettelKasten)" })
-set("n", "<leader>odd", "<cmd>lua obsidian_delete_note()<cr>", { desc = "Obsidian: Delete note" })
+		-- Navigations
+		set("n", "<leader>of", "<cmd>Obsidian follow_link<cr>", { desc = "Obsidian: Follow link" })
+		set("n", "<leader>ob", "<cmd>Obsidian backlinks<cr>", { desc = "Obsidian: Backlinks" })
+		set("n", "<leader>oT", "<cmd>Obsidian tags<cr>", { desc = "Obsidian: Tags" })
 
--- Linking
-set("n", "<leader>os", "<cmd>ObsidianLink<cr>", { desc = "Obsidian: Link to note" })
-set("v", "<leader>oL", "<cmd>ObsidianLinkNew<cr>", { desc = "Obsidian: Create new linked note" })
-set("v", "<leader>oe", "<cmd>ObsidianExtractNote<cr>", { desc = "Obsidian: Extract to new note" })
+		-- Note Management
+		set("n", "<leader>ot", "<cmd>Obsidian template<cr>", { desc = "Obsidian: Insert template" })
+		set("n", "<leader>or", "<cmd>Obsidian rename<cr>", { desc = "Obsidian: Rename note" })
 
--- Utilities
-set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>", { desc = "Obsidian: Open in app" })
-set("n", "<leader>od", "<cmd>ObsidianToday<cr>", { desc = "Obsidian: Today's note" })
-set("n", "<leader>oc", function()
-	return require("obsidian").util.toggle_checkbox()
-end, { desc = "Obsidian: Toggle checkbox" })
+		-- Inbox Workflow
+		set(
+			"n",
+			"<leader>ok",
+			"<cmd>!mv '%:p' $HOME/Notes/ZettelKasten/<cr> <cmd>bd<cr>",
+			{ desc = "Obsidian: Keep (move to ZettelKasten)" }
+		)
+		set("n", "<leader>odd", "<cmd>!rm '%:p'<cr> <cmd>bd<cr>", { desc = "Obsidian: Delete note" })
+
+		-- Linking
+		set({ "n", "v" }, "<leader>ol", "<cmd>Obsidian link<cr>", { desc = "Obsidian: Link to note" })
+		set("v", "<leader>oL", "<cmd>Obsidian link_new<cr>", { desc = "Obsidian: Create new linked note" })
+
+		-- Utilities
+		set("n", "<leader>oo", "<cmd>Obsidian open<cr>", { desc = "Obsidian: Open in app" })
+		set("n", "<leader>oc", function()
+			return require("obsidian").util.toggle_checkbox()
+		end, { desc = "Obsidian: Toggle checkbox" })
+	end,
+})

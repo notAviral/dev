@@ -13,7 +13,7 @@ font-family-bold-italic = JetBrains Mono NF Bold Italic
 font-size = 18
 
 # Opacity and Blurness of the window : 
-background-opacity      = 0.75
+background-opacity      = 0.90
 background-blur         = 80                        
 # blur doesn't works in x11 with gnome but will work with hyprland
 

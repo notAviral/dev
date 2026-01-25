@@ -1,10 +1,13 @@
 local obsidian = require("obsidian")
 
 obsidian.setup({
+
+    legacy_commands = false,
+
     workspaces = {
         {
             name = "Notes",
-            path = "~/Notes",
+            path = vim.fn.expand("~/Notes"),
         },
     },
 
@@ -17,60 +20,42 @@ obsidian.setup({
         time_format = "%H:%M",
     },
 
-    -- Use simple note naming (just the title with .md extension)
+    -- clean, deterministic note names
     note_id_func = function(title)
-        local suffix = ""
-        if title ~= nil then
-            -- Clean the title: replace spaces with hyphens, remove special chars
-            suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
-        else
-            -- If no title, use timestamp
-            suffix = tostring(os.date("%Y%m%d-%H%M%S"))
+        if title and title ~= "" then
+            return title
         end
-        return suffix -- Just return the cleaned title, no random ID
+
+        return os.date("%Y%m%d-%H%M%S")
     end,
+
+    frontmatter = {
+        enabled = false,
+        func = require("obsidian.builtin").frontmatter,
+        sort = { "id", "aliases", "tags" },
+    }
 
     preferred_link_style = "markdown",
 
-    follow_url_func = function(url)
-        vim.fn.jobstart({ "xdg-open", url })
-    end,
-
     completion = {
-        nvim_cmp = true,
+        nvim_cmp = false,
+        blink = true,
         min_chars = 2,
     },
 
-    mappings = {
-        ["gf"] = {
-            action = function()
-                return require("obsidian").util.gf_passthrough()
-            end,
-            opts = { noremap = false, expr = true, buffer = true },
-        },
-        ["<leader>ch"] = {
-            action = function()
-                return require("obsidian").util.toggle_checkbox()
-            end,
-            opts = { buffer = true },
-        },
+    checkboxes = {
+        order = { " ", "x", ">", "~" },
     },
 
     ui = {
-        enable = true,
-        checkboxes = {
-            [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
-            ["x"] = { char = "", hl_group = "ObsidianDone" },
-            [">"] = { char = "", hl_group = "ObsidianRightArrow" },
-            ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
-        },
-        external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
+        enable = false,
+
+        external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
         reference_text = { hl_group = "ObsidianRefText" },
         highlight_text = { hl_group = "ObsidianHighlightText" },
         tags = { hl_group = "ObsidianTag" },
     },
 
-    -- Enable template picker with Telescope
     picker = {
         name = "telescope.nvim",
         mappings = {
