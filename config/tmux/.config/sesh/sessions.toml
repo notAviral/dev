@@ -1,0 +1,14 @@
+import = [ "./windows.toml" ]
+
+[[session]]
+name = "Notes"
+path = "~/Notes/"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+
+[[session]]
+name = "Config"
+path = "~/dev"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+windows = [ "lgit" ]
