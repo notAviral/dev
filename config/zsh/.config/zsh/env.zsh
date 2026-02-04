@@ -12,3 +12,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # My secrets directory
 export SECRETS_DIR="$HOME/.secrets/"
+
+# My notes dir:
+export NOTES_DIR='$HOME/Notes/'

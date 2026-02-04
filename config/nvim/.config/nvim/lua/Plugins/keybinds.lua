@@ -12,6 +12,7 @@ local builtin = require("telescope.builtin")
 set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" }) -- find files
 set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" }) -- grep
 set("n", "<leader>tb", builtin.buffers, { desc = "Telescope buffers" }) -- show buffers
+set("n", "<leader>b", builtin.buffers, { desc = "Telescope buffers" }) -- show buffers
 set("n", "<leader>to", builtin.oldfiles, { desc = "Recent Files" }) -- Recent files
 set("n", "<leader>tc", builtin.commands, { desc = "List of Commands" }) -- show commands
 set("n", "<leader>sd", builtin.lsp_references, { desc = "Definations" }) -- show Definations

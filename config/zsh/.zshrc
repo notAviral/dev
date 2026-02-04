@@ -3,7 +3,7 @@ ZDOTDIR="$HOME/.config/zsh"
 # Sourcing all Modules
 source "$ZDOTDIR/plugins.zsh" # First
 
-source "$ZDOTDIR/os.zsh"
+source "$ZDOTDIR/session-mgr.zsh"
 source "$ZDOTDIR/alias.zsh"
 source "$ZDOTDIR/completions.zsh"
 source "$ZDOTDIR/env.zsh"

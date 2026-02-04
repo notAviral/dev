@@ -14,13 +14,13 @@ function on {
         return 1
     fi
     
-    if [ -f "$HOME/Notes/ZettelKasten/$1.md" ]; then
+    if [ -f "$NOTES_DIR/ZettelKasten/$1.md" ]; then
         echo "Note already exists!!"
-        nvim "$HOME/Notes/ZettelKasten/$1.md"
+        nvim "$NOTES_DIR/ZettelKasten/$1.md"
     else
-        nvim "$HOME/Notes/Inbox/$1.md"
+        nvim "$NOTES_DIR/Inbox/$1.md"
     fi
 }
 
-alias oo='cd $HOME/Notes/'
-alias or='nvim $HOME/Notes/Inbox/*.md'
+alias oo="cd $NOTES_DIR"
+alias or="nvim $NOTES_DIR/Inbox/*.md"

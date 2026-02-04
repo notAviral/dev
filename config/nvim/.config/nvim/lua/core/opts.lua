@@ -1,5 +1,4 @@
-
--- Options / Settings for Neovim 
+-- Options / Settings for Neovim
 local opt = vim.opt
 
 -- Tab opts
@@ -10,7 +9,7 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set autoindent")
 
 -- Leader Key
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- Visuals
 vim.wo.number = true
@@ -23,3 +22,8 @@ opt.splitright = true
 -- Best search settings :)
 opt.smartcase = true
 opt.ignorecase = true
+
+-- Conceal level
+
+opt.conceallevel = 2
+opt.concealcursor = "nc"
