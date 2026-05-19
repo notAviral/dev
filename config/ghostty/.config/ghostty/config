@@ -10,7 +10,7 @@ font-family             = JetBrains Mono Nerd Font
 font-family-bold        = JetBrains Mono NF Bold 
 font-family-italic      = JetBrains Mono NF Italic 
 font-family-bold-italic = JetBrains Mono NF Bold Italic
-font-size = 18
+font-size = 20
 
 # Opacity and Blurness of the window : 
 background-opacity      = 0.90
@@ -38,6 +38,9 @@ scroll-to-bottom        = keystroke
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+r=reload_config
 
+# Window decorations :
+window-decoration       = none
+gtk-titlebar            = false
 
 # Miscellanious : 
 # initial-command         = fastfetch

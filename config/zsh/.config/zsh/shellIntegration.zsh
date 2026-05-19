@@ -13,3 +13,6 @@ eval "$(starship init zsh)"
 
 # Zoxide integration (can defer slightly)
 eval "$(zoxide init zsh)"
+
+# Direnv elections : 
+eval "$(direnv hook zsh)"

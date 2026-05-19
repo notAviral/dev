@@ -9,7 +9,7 @@ require("render-markdown").setup({
 		enabled = true,
 		position = "inline",
 		width = "full",
-		padding = 0,
+		-- padding = 0,
 		backgrounds = {},
 		icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
 	},
@@ -21,7 +21,7 @@ require("render-markdown").setup({
 		width = "full",
 		language = true,
 		border = "hide",
-		padding = 1,
+		-- padding = 1,
 
 		-- wrapper only (syntax still treesitter)
 		highlight = "RenderMarkdownCode",

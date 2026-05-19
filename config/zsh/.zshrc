@@ -5,6 +5,7 @@ source "$ZDOTDIR/plugins.zsh" # First
 
 source "$ZDOTDIR/session-mgr.zsh"
 source "$ZDOTDIR/alias.zsh"
+source "$ZDOTDIR/git.zsh"
 source "$ZDOTDIR/completions.zsh"
 source "$ZDOTDIR/env.zsh"
 source "$ZDOTDIR/extra.zsh"

@@ -14,4 +14,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export SECRETS_DIR="$HOME/.secrets/"
 
 # My notes dir:
-export NOTES_DIR='$HOME/Notes/'
+export NOTES_DIR="$HOME/Notes"
+
+# Nix Shell:
+export NIX_BUILD_SHELL=zsh
