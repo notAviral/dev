@@ -16,6 +16,13 @@ return {
 		-- lint = "luacheck",
 	},
 
+	go = {
+		lsp = "gopls",
+		lsp_config = {},
+		-- fmt = "gofmt",
+		-- lint = "golint",
+	},
+
 	python = {
 		fmt = { "black", "isort" },
 		lsp = "basedpyright",
