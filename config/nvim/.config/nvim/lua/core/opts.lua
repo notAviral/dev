@@ -38,3 +38,6 @@ opt.showbreak = "↪ "
 -- Move by visual lines when wrapped
 vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
 vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
+
+-- disable Copilot autocomplete on boot
+vim.g.copilot_enabled = false
