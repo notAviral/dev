@@ -19,6 +19,9 @@ recurse = true
 autoStash = true
 missingCommitsCheck = warn
 
+[rerere]
+enabled = true
+
 [log]
 abbrevCommit = true
 graphColor = blue,yellow,cyan,magenta,green,red

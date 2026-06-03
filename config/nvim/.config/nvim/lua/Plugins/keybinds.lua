@@ -10,17 +10,25 @@ set({ "n" }, "<leader>e", ":Oil<CR>", { desc = "Oil: Open Explorer as a buffer" 
 
 -- Telescope
 local builtin = require("telescope.builtin")
-set("n", "<leader>ff", builtin.find_files, { desc = "Telescope: find files" }) -- find files
-set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope: live grep" }) -- grep
-set("n", "<leader>tb", builtin.buffers, { desc = "Telescope: buffers" }) -- show buffers
-set("n", "<leader>b", builtin.buffers, { desc = "Telescope: buffers" }) -- show buffers
-set("n", "<leader>to", builtin.oldfiles, { desc = "Telescope: Recent Files" }) -- Recent files
-set("n", "<leader>tc", builtin.commands, { desc = "Telescope: List of Commands" }) -- show commands
-set("n", "<leader>sd", builtin.lsp_references, { desc = "Telescope: Definations" }) -- show Definations
-set("n", "<leader>d", builtin.diagnostics, { desc = "Telescope: Diagnostics" }) -- show diagnostics
-set("n", "<leader>th", builtin.builtin, { desc = "Telescope: Builtin Pickers" }) -- show Pickers
-set("n", "<leader>sh", ":Telescope help_tags <CR>", { desc = "Telescope: Show Help Tags" }) -- Show Help Documentation
-set("n", "<leader>sk", ":Telescope keymaps <CR>", { desc = "Telescope: Show Keybinds" }) -- Show all KeyBinds
+set("n", "<leader>ff", builtin.find_files, { desc = "Telescope: find files" })
+set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope: live grep" })
+set("n", "<leader>tb", builtin.buffers, { desc = "Telescope: buffers" })
+set("n", "<leader>b", builtin.buffers, { desc = "Telescope: buffers" })
+set("n", "<leader>to", builtin.oldfiles, { desc = "Telescope: Recent Files" })
+set("n", "<leader>tc", builtin.commands, { desc = "Telescope: List of Commands" })
+set("n", "<leader>sd", builtin.lsp_references, { desc = "Telescope: Definations" })
+set("n", "<leader>d", builtin.diagnostics, { desc = "Telescope: Diagnostics" })
+set("n", "<leader>th", builtin.builtin, { desc = "Telescope: Builtin Pickers" })
+set("n", "<leader>sh", ":Telescope help_tags <CR>", { desc = "Telescope: Show Help Tags" })
+set("n", "<leader>sk", ":Telescope keymaps <CR>", { desc = "Telescope: Show Keybinds" })
+
+set("n", "<leader>tm", ":Telescope recall <CR>", { desc = "Telescope & Recall : Show recall marks" })
+
+-- Recall Navigations
+local recall = require("recall")
+set("n", "<C-m>", recall.toggle, { desc = "Recall: Toggle Mark" })
+set("n", "<C-,>", recall.goto_prev, { desc = "Recall: Toggle Mark" })
+set("n", "<C-.>", recall.goto_next, { desc = "Recall: Toggle Mark" })
 
 -- LSP Configs
 set("n", "D", vim.lsp.buf.hover, { desc = "LSP: Hover" })

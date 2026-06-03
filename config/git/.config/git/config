@@ -1,6 +1,6 @@
 # User Configs :
 
-# this is to upload my git config to GitHub wiithout
+# this is to upload my git config to GitHub without
 # worrying about my personal stuff
 [include]
   path = "./config_personal"

@@ -37,6 +37,7 @@ scroll-to-bottom        = keystroke
 # KeyBinds : 
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+r=reload_config
+keybind = ctrl+shift+,=open_config
 
 # Window decorations :
 window-decoration       = none

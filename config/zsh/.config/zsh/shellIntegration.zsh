@@ -16,3 +16,6 @@ eval "$(zoxide init zsh)"
 
 # Direnv elections : 
 eval "$(direnv hook zsh)"
+
+# Devenv Integrations:
+eval "$(devenv hook zsh)"
