@@ -24,11 +24,6 @@ set("n", "<leader>sk", ":Telescope keymaps <CR>", { desc = "Telescope: Show Keyb
 
 set("n", "<leader>tm", ":Telescope recall <CR>", { desc = "Telescope & Recall : Show recall marks" })
 
--- Recall Navigations
-local recall = require("recall")
-set("n", "<C-m>", recall.toggle, { desc = "Recall: Toggle Mark" })
-set("n", "<C-,>", recall.goto_prev, { desc = "Recall: Toggle Mark" })
-set("n", "<C-.>", recall.goto_next, { desc = "Recall: Toggle Mark" })
 
 -- LSP Configs
 set("n", "D", vim.lsp.buf.hover, { desc = "LSP: Hover" })
@@ -37,7 +32,7 @@ set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP: Code Act
 
 -- Git
 set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Gitsigns: Preview hunk" })
-set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns: Toggle blame" })
+set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Gitsigns: Toggle blame" })
 
 -- VIM tmux Navigations -
 set("n", "<M-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", { desc = "Tmux: Navigate Left" })
@@ -51,18 +46,18 @@ set("v", "<leader>ce", ":CopilotChatExplain<CR>", { desc = "Copilot: Explain Cod
 set("v", "<leader>cr", ":CopilotChatReview<CR>", { desc = "Copilot: Riview Code" })
 set("v", "<leader>cf", ":CopilotChatFix<CR>", { desc = "Copilot: Code Fixes" })
 set("v", "<leader>cd", ":CopilotChatDocs<CR>", { desc = "Copilot: Generate Documentation" })
-set("v", "<leader>ct", ":CopilotChatTests<CR>", { desc = "Copilot: Generate Tests" })
+set("v", "<leader>cT", ":CopilotChatTests<CR>", { desc = "Copilot: Generate Tests" })
 set("n", "<leader>cm", ":CopilotChatCommit<CR>", { desc = "Copilot: Generate Messages" })
 set("n", "<leader>ct", function()
-	if vim.g.copilot_enabled then
-		vim.cmd("Copilot disable")
-		vim.g.copilot_enabled = false
-		print("Copilot disabled")
-	else
-		vim.cmd("Copilot enable")
-		vim.g.copilot_enabled = true
-		print("Copilot enabled")
-	end
+    if vim.g.copilot_enabled then
+        vim.cmd("Copilot disable")
+        vim.g.copilot_enabled = false
+        print("Copilot disabled")
+    else
+        vim.cmd("Copilot enable")
+        vim.g.copilot_enabled = true
+        print("Copilot enabled")
+    end
 end)
 
 -- Obsidian Keybinds
@@ -72,34 +67,34 @@ set("n", "<leader>og", "<cmd>Obsidian search<cr>", { desc = "Obsidian: Grep note
 set("n", "<leader>od", "<cmd>Obsidian today<cr>", { desc = "Obsidian: Today's note" })
 
 vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = "*.md",
-	callback = function()
-		-- Navigations
-		set("n", "<leader>of", "<cmd>Obsidian follow_link<cr>", { desc = "Obsidian: Follow link" })
-		set("n", "<leader>ob", "<cmd>Obsidian backlinks<cr>", { desc = "Obsidian: Backlinks" })
-		set("n", "<leader>oT", "<cmd>Obsidian tags<cr>", { desc = "Obsidian: Tags" })
+    pattern = "*.md",
+    callback = function()
+        -- Navigations
+        set("n", "<leader>of", "<cmd>Obsidian follow_link<cr>", { desc = "Obsidian: Follow link" })
+        set("n", "<leader>ob", "<cmd>Obsidian backlinks<cr>", { desc = "Obsidian: Backlinks" })
+        set("n", "<leader>oT", "<cmd>Obsidian tags<cr>", { desc = "Obsidian: Tags" })
 
-		-- Note Management
-		set("n", "<leader>ot", "<cmd>Obsidian template<cr>", { desc = "Obsidian: Insert template" })
-		set("n", "<leader>or", "<cmd>Obsidian rename<cr>", { desc = "Obsidian: Rename note" })
+        -- Note Management
+        set("n", "<leader>ot", "<cmd>Obsidian template<cr>", { desc = "Obsidian: Insert template" })
+        set("n", "<leader>or", "<cmd>Obsidian rename<cr>", { desc = "Obsidian: Rename note" })
 
-		-- Inbox Workflow
-		set(
-			"n",
-			"<leader>ok",
-			"<cmd>!mv '%:p' $HOME/Notes/ZettelKasten/<cr> <cmd>bd<cr>",
-			{ desc = "Obsidian: Keep (move to ZettelKasten)" }
-		)
-		set("n", "<leader>odd", "<cmd>!rm '%:p'<cr> <cmd>bd<cr>", { desc = "Obsidian: Delete note" })
+        -- Inbox Workflow
+        set(
+            "n",
+            "<leader>ok",
+            "<cmd>!mv '%:p' $HOME/Notes/ZettelKasten/<cr> <cmd>bd<cr>",
+            { desc = "Obsidian: Keep (move to ZettelKasten)" }
+        )
+        set("n", "<leader>odd", "<cmd>!rm '%:p'<cr> <cmd>bd<cr>", { desc = "Obsidian: Delete note" })
 
-		-- Linking
-		set({ "n", "v" }, "<leader>ol", "<cmd>Obsidian link<cr>", { desc = "Obsidian: Link to note" })
-		set("v", "<leader>oL", "<cmd>Obsidian link_new<cr>", { desc = "Obsidian: Create new linked note" })
+        -- Linking
+        set({ "n", "v" }, "<leader>ol", "<cmd>Obsidian link<cr>", { desc = "Obsidian: Link to note" })
+        set("v", "<leader>oL", "<cmd>Obsidian link_new<cr>", { desc = "Obsidian: Create new linked note" })
 
-		-- Utilities
-		set("n", "<leader>oo", "<cmd>Obsidian open<cr>", { desc = "Obsidian: Open in app" })
-		set("n", "<leader>oc", function()
-			return require("obsidian").util.toggle_checkbox()
-		end, { desc = "Obsidian: Toggle checkbox" })
-	end,
+        -- Utilities
+        set("n", "<leader>oo", "<cmd>Obsidian open<cr>", { desc = "Obsidian: Open in app" })
+        set("n", "<leader>oc", function()
+            return require("obsidian").util.toggle_checkbox()
+        end, { desc = "Obsidian: Toggle checkbox" })
+    end,
 })

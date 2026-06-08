@@ -7,13 +7,19 @@ return {
 		},
 		build = "make tiktoken",
 		opts = {
+
+			model = "claude-haiku-4.5",
+			temperature = 0.1,
+			trusted_tools = nil,
+			auto_insert_mode = true,
+
 			window = {
 				layout = "float",
-				width = 80, -- Fixed width in columns
-				height = 20, -- Fixed height in rows
-				border = "rounded", -- 'single', 'double', 'rounded', 'solid'
+				width = 80,
+				height = 20,
+				border = "rounded",
 				title = "🤖 AI Assistant",
-				zindex = 100, -- Ensure window stays on top
+				zindex = 100,
 			},
 
 			headers = {

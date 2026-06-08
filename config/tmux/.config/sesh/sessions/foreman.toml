@@ -1,0 +1,18 @@
+[[session]]
+
+name = "Foreman"
+path = "~/Projects/foreman"
+startup_command = "nvim"
+preview_command = "eza --all --git --icons --color=always {}"
+windows = [ "curl" ]
+
+[[window]]
+name = "curl"
+startup_script = """
+tmux select-window -n
+tmux split-window -h
+tmux split-window -v
+tmux select-pane -t 1 && clear
+tmux resize-pane -x 100 && clear
+tmux select-window -p && clear"""
+
