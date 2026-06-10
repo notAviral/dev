@@ -135,4 +135,9 @@ return {
 		lsp = "dockerls",
 		lsp_config = {},
 	},
+
+    qml = {
+        lsp = "qmlls",
+        lsp_config = {},
+    }
 }

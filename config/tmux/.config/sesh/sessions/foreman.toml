@@ -4,7 +4,7 @@ name = "Foreman"
 path = "~/Projects/foreman"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
-windows = [ "curl" ]
+windows = [ "curl", "lgit" ]
 
 [[window]]
 name = "curl"
@@ -16,3 +16,6 @@ tmux select-pane -t 1 && clear
 tmux resize-pane -x 100 && clear
 tmux select-window -p && clear"""
 
+[[window]]
+name = "lgit"
+startup_script = "lazygit"

@@ -2,7 +2,7 @@
 
 strict_mode = false
 
-sort_order = ["config", "tmuxinator", "tmux", "zoxide"]
+sort_order = ["tmux", "config", "tmuxinator", "zoxide"]
 dir_length = 3
 
 # For other sessions :
