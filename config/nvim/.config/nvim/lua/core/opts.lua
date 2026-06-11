@@ -11,6 +11,9 @@ vim.cmd("set autoindent")
 -- Leader Key
 vim.g.mapleader = " "
 
+-- timeout Length for mapped sequence completion
+opt.timeoutlen = 250
+
 -- Visuals
 vim.wo.number = true
 vim.wo.relativenumber = true
@@ -38,4 +41,3 @@ opt.showbreak = "↪ "
 -- Move by visual lines when wrapped
 vim.keymap.set("n", "j", "gj", { noremap = true, silent = true })
 vim.keymap.set("n", "k", "gk", { noremap = true, silent = true })
-
