@@ -6,3 +6,11 @@ startup_script = "lazygit"
 [[window]]
 name = "git"
 startup_script = "git pull"
+
+[[window]]
+name = "fish"
+startup_script = "clear"
+
+[[window]]
+name = "zsh"
+startup_script = "clear"
