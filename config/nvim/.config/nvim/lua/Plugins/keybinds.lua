@@ -8,6 +8,10 @@ set("n", "<BSlash>", "<cmd>Neotree toggle<CR>", { desc = "NeoTree: Open Filetree
 set("n", "-", "<cmd>Oil<CR>", { desc = "Oil: Open Parent Directory" })
 set({ "n" }, "<leader>e", ":Oil<CR>", { desc = "Oil: Open Explorer as a buffer" })
 
+-- Yazi
+set({ "n" }, "<leader>y", "<cmd>Yazi<CR>", { desc = "Yazi: Open Yazi for current file" })
+set({ "n" }, "<leader>Y", "<cmd>Yazi cwd<CR>", { desc = "Yazi: Open Yazi for current working Directory" })
+
 -- Telescope
 local builtin = require("telescope.builtin")
 set("n", "<leader>f", builtin.find_files, { desc = "Telescope: Find Files" })
