@@ -12,13 +12,3 @@ path = "~/dev"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
 windows = [ "zsh", "zsh", "lgit" ]
-
-[default_session]
-startup_command = """
-tmux new-window
-tmux new-window
-tmux new-window && clear
-tmux select-window -t 1 && clear
-"""
-preview_command = "eza --all --git --icons --color=always {}"
-# startup_command_ignore_dirs = ["~/repos", "~/.config"]
