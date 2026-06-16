@@ -23,3 +23,6 @@ export NIX_BUILD_SHELL=zsh
 # Go Env:
 export GOPATH="$HOME/Libraries/go"
 export PATH="$PATH:$GOPATH/bin"
+
+# starship:
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/zsh/starship.toml"
