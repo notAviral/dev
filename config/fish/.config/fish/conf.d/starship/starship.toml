@@ -1,0 +1,22 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$character"""
+
+# Transient prompt: minimal prompt shown after command execution
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[directory]
+truncation_length = 3
+style = "bold cyan"
+
+[git_branch]
+format = "[$branch]($style) "
+style = "bold purple"
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+style = "bold yellow"
