@@ -1,6 +1,11 @@
 
 if status is-interactive 
 
+    abbr -a v "nvim"
+    abbr -a e "exit"
+    abbr -a c "clear"
+    abbr -a t "tmux"
+
     abbr -a l  "eza -lah"
     abbr -a cd "z"
 

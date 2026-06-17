@@ -3,7 +3,8 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
-		require("nvim-treesitter").install({
+		local treesitter = require("nvim-treesitter")
+		treesitter.install({
 			"rust",
 			"c",
 			"cpp",
@@ -17,5 +18,8 @@ return {
 			"bash",
 		})
 		vim.treesitter.language.register("markdown", "markdown")
+		treesitter.setup({
+			highlight = { enabled = true },
+		})
 	end,
 }

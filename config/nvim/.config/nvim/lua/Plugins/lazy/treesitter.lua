@@ -6,6 +6,7 @@ return {
 		require("nvim-treesitter").install({
 			"rust",
 			"c",
+			"go",
 			"cpp",
 			"markdown",
 			"markdown_inline",

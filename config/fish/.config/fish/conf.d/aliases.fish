@@ -1,12 +1,6 @@
 
 if status is-interactive 
 
-    alias v "nvim"
-    alias vim "nvim"
-    alias c "clear"
-    alias e "exit"
-    alias t "tmux"
-    
     alias nano 'nvim'
 
     

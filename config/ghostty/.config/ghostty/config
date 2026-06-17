@@ -3,7 +3,8 @@
 # -------------------------------------------------------------
 
 # Theme 
-theme                   = "Catppuccin Mocha"
+# theme                   = "colors_wallust.conf"
+theme                   = "TokyoNight Night"
 
 # Fonts : 
 font-family             = JetBrains Mono Nerd Font 

@@ -1,8 +1,12 @@
-backend = "wal"
+backend = "full"
 color_space = "lch"
-palette = "saliencedarkbalanced16"
+palette = "dark16"
 
-check_contrast = true
+# check_contrast = true
+
+sat_mult = 1.6        # boost saturation (1.0 = default, try 1.2–1.8)
+val_mult = 1.4        # slightly brighter colors
+threshold = 10        # color distance threshold — lower = more distinct colors
 
 [templates]
 
@@ -10,7 +14,7 @@ hyprpaper.template  = "hyprpaper.conf"
 hyprpaper.target    = "~/.config/hypr/hyprpaper.conf"
 
 ghostty.template    = "ghostty.conf"
-ghostty.target      = "~/.config/ghostty/colors.conf"
+ghostty.target      = "~/.config/ghostty/themes/colors_wallust.conf"
 
 neovim.template     = "neopywal.vim"
 neovim.target       = "~/.cache/wallust/colors_neopywal.vim"
