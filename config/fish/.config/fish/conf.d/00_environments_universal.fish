@@ -8,4 +8,4 @@ set -Ux EDITOR nvim
 
 set -Ux GTK_IM_MODULE simple
 
-set -gx NIX_BUILD_SHELL fish
+set -gx NIX_BUILD_SHELL bash

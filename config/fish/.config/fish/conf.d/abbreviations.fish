@@ -6,6 +6,9 @@ if status is-interactive
     abbr -a c "clear"
     abbr -a t "tmux"
 
+    abbr -a s "sesh"
+    abbr -a sc "sesh connect"
+
     abbr -a l  "eza -lah"
     abbr -a cd "z"
 

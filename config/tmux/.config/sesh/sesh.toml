@@ -3,10 +3,11 @@
 strict_mode = false
 
 sort_order = ["tmux", "config", "tmuxinator", "zoxide"]
-dir_length = 3
+dir_length = 2
 
 # For other sessions :
 import = [
+    "~/.config/sesh/windows.toml",
     "~/.config/sesh/sessions.toml",
     "~/.config/sesh/sessions/foreman.toml",
     "~/.config/sesh/sessions/leetcode.toml",
@@ -14,3 +15,8 @@ import = [
     "~/.config/sesh/sessions/muted.toml",
     "~/.config/sesh/sessions/obsidian.toml",
 ]
+
+[default_session]
+startup_command = "clear"
+preview_command = "eza --all --git --icons --color=always {}"
+windows = [ "fish", "fish", "fish" ]
