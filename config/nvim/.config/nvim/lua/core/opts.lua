@@ -17,6 +17,7 @@ opt.timeoutlen = 250
 -- Visuals
 vim.wo.number = true
 vim.wo.relativenumber = true
+opt.scrolloff = math.floor(vim.o.lines / 2) - 3
 
 -- splits
 opt.splitbelow = true

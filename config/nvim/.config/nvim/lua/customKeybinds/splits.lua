@@ -2,72 +2,45 @@ local M = {}
 
 local builtin = require("telescope.builtin")
 
--- Helper function to check if input is a path
 local function is_path(str)
-    return str:match("^/") or str:match("^~/") or str:match("^%./") or str:match("^%.%./")
+	return str:match("^/") or str:match("^~/") or str:match("^%./") or str:match("^%.%./")
 end
 
--- Helper function to expand path
 local function expand_path(path)
-    return vim.fn.expand(path)
+	return vim.fn.expand(path)
 end
 
--- Vertical split
-M.verticalSplit = function()
-    vim.keymap.set("n", "<leader>vs", function()
-        builtin.find_files({
-            attach_mappings = function(_, map)
-                map("i", "<CR>", function(prompt_bufnr)
-                    local action_state = require("telescope.actions.state")
-                    local actions = require("telescope.actions")
-                    local picker = action_state.get_current_picker(prompt_bufnr)
-                    local input = picker:_get_prompt()
+local function open_with_split(split_cmd)
+	return function()
+		builtin.find_files({
+			attach_mappings = function(_, map)
+				map("i", "<CR>", function(prompt_bufnr)
+					local action_state = require("telescope.actions.state")
+					local actions = require("telescope.actions")
 
-                    -- Check if input is a path
-                    if is_path(input) then
-                        actions.close(prompt_bufnr)
-                        local file_path = expand_path(input)
-                        vim.cmd("vsplit " .. vim.fn.fnameescape(file_path))
-                    else
-                        -- Normal telescope selection
-                        local selection = action_state.get_selected_entry()
-                        actions.close(prompt_bufnr)
-                        vim.cmd("vsplit " .. selection.path)
-                    end
-                end)
-                return true
-            end,
-        })
-    end)
+					local picker = action_state.get_current_picker(prompt_bufnr)
+					local input = picker:_get_prompt()
+
+					actions.close(prompt_bufnr)
+
+					if is_path(input) then
+						local file_path = expand_path(input)
+						vim.cmd(split_cmd .. " " .. vim.fn.fnameescape(file_path))
+					else
+						local selection = action_state.get_selected_entry()
+						if selection then
+							vim.cmd(split_cmd .. " " .. vim.fn.fnameescape(selection.path))
+						end
+					end
+				end)
+
+				return true
+			end,
+		})
+	end
 end
 
--- Horizontal split
-M.horizontalSplit = function()
-    vim.keymap.set("n", "<leader>hs", function()
-        builtin.find_files({
-            attach_mappings = function(_, map)
-                map("i", "<CR>", function(prompt_bufnr)
-                    local action_state = require("telescope.actions.state")
-                    local actions = require("telescope.actions")
-                    local picker = action_state.get_current_picker(prompt_bufnr)
-                    local input = picker:_get_prompt()
-
-                    -- Check if input is a path
-                    if is_path(input) then
-                        actions.close(prompt_bufnr)
-                        local file_path = expand_path(input)
-                        vim.cmd("split " .. vim.fn.fnameescape(file_path))
-                    else
-                        -- Normal telescope selection
-                        local selection = action_state.get_selected_entry()
-                        actions.close(prompt_bufnr)
-                        vim.cmd("split " .. selection.path)
-                    end
-                end)
-                return true
-            end,
-        })
-    end)
-end
+M.verticalSplit = open_with_split("vsplit")
+M.horizontalSplit = open_with_split("split")
 
 return M
