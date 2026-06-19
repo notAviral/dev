@@ -4,6 +4,7 @@ SETUVAR --export EDITOR:nvim
 SETUVAR --export GTK_IM_MODULE:simple
 SETUVAR --export NOTES_DIR:/home/aviral/Notes/
 SETUVAR --export SECRETS_DIR:/home/aviral/\x2esecrets/
+SETUVAR --export SHELL:/bin/fish
 SETUVAR --export XDG_HOME_CACHE:/home/aviral/\x2ecache
 SETUVAR --export XDG_HOME_CONFIG:/home/aviral/\x2econfig
 SETUVAR __fish_initialized:4300
