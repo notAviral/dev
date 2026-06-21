@@ -15,10 +15,10 @@ set("n", "<C-j>", ":bnext<CR>", { desc = "Next buffer" })
 set("n", "<C-k>", ":bprevious<CR>", { desc = "Previous buffer" })
 
 -- Splits
-set("n", "<C-v>", require("customKeybinds.splits").verticalSplit, { desc = "vertically split the window" })
-set("n", "<C-v>", require("customKeybinds.splits").horizontalSplit, { desc = "vertically split the window" })
-set("n", "<leader>vv", ":vsplit<CR>", { desc = "Normal verticalSplit" })
-set("n", "<leader>hh", ":hsplit<CR>", { desc = "Normal horizontalSplit" })
+set("n", "<leader>vv", require("customKeybinds.splits").verticalSplit, { desc = "vertically split the window" })
+set("n", "<leader>hh", require("customKeybinds.splits").horizontalSplit, { desc = "vertically split the window" })
+set("n", "<leader>vs", ":vsplit<CR>", { desc = "Normal verticalSplit" })
+set("n", "<leader>hs", ":hsplit<CR>", { desc = "Normal horizontalSplit" })
 
 -- Escape from insert
 set("i", "jf", "<ESC>", { desc = "Escape from insert mode" })

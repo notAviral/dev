@@ -12,7 +12,7 @@ vim.cmd("set autoindent")
 vim.g.mapleader = " "
 
 -- timeout Length for mapped sequence completion
-opt.timeoutlen = 250
+opt.timeoutlen = 350
 
 -- Visuals
 vim.wo.number = true
