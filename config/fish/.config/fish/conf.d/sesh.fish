@@ -7,4 +7,5 @@ function sesh-sessions
     sesh connect $session
 end
 
-bind \cl sesh-sessions
+bind -M insert \cl sesh-sessions
+bind -M default \cl sesh-sessions

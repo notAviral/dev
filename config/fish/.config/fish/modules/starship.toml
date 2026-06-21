@@ -9,20 +9,24 @@ add_newline = true
 palette = "tokyonight_night"
 
 format = """
-$os\
 $username\
+$hostname\
 $directory\
 $line_break\
-${custom.giturl}\
 $git_branch\
+${custom.giturl}\
 ${custom.git_worktree}\
 $git_status\
+$fill\
 $all
 $character"""
 
+[fill]
+symbol = " "
+
 [directory]
 style = "teal"
-format = "[ at $path ]($style)"
+format = "[$path]($style)"
 truncation_length = 2
 
 [directory.substitutions]
@@ -34,11 +38,18 @@ truncation_length = 2
 "Others" = " "
 
 [username]
-disabled = false
+disabled = true
 show_always = true
-style_user = "bg:surface0 fg:text"
-style_root = "bg:surface0 fg:text"
-format = "[ $user]($style_user)"
+style_user = "green"
+style_root = "red"
+format = "[$user]($style)[@](bold white)"
+
+[hostname]
+disabled = true
+style = "blue"
+ssh_only = false
+ssh_symbol = " "
+format = "[$ssh_symbol$hostname]($style) [in](bold white) "
 
 [line_break]
 disabled = true
@@ -60,19 +71,17 @@ format = "[[  $time ](fg:yellow bg:foam)]($style)"
 [custom.giturl]
 description = "Display symbol for remote Git server"
 command = """
-GIT_REMOTE=$(command git ls-remote --get-url 2> /dev/null)
-if [[ "$GIT_REMOTE" =~ "github" ]]; then
-    GIT_REMOTE_SYMBOL=" "
-elif [[ "$GIT_REMOTE" =~ "gitlab" ]]; then
-    GIT_REMOTE_SYMBOL=" "
-elif [[ "$GIT_REMOTE" =~ "bitbucket" ]]; then
-    GIT_REMOTE_SYMBOL=" "
-elif [[ "$GIT_REMOTE" =~ "git" ]]; then
-    GIT_REMOTE_SYMBOL=" "
+set GIT_REMOTE (command git ls-remote --get-url 2>/dev/null)
+if string match -q "*github*" $GIT_REMOTE
+    set GIT_REMOTE_SYMBOL " GitHub"
+else if string match -q "*gitlab*" $GIT_REMOTE
+    set GIT_REMOTE_SYMBOL " GitLab"
+else if string match -q "*bitbucket*" $GIT_REMOTE
+    set GIT_REMOTE_SYMBOL " BitBucket"
 else
-    GIT_REMOTE_SYMBOL=" "
-fi
-echo "$GIT_REMOTE_SYMBOL "
+    set GIT_REMOTE_SYMBOL " "
+end
+echo "$GIT_REMOTE_SYMBOL"
 """
 when = "git rev-parse --is-inside-work-tree 2> /dev/null"
 format = "$output"
@@ -80,16 +89,9 @@ require_repo = true
 ignore_timeout = true
 
 [git_branch]
-symbol = "[](base) "
+symbol = "[](base) "
 style = "fg:lavender bg:base"
-format =  "  [$symbol$branch]($style)[](base)"
-
-# [git_status]
-# MINIMAL git status
-# format = " [($all_status$ahead_behind )]($style)"
-# ahead    = "⇡${count} "
-# behind   = "⇣${count} "
-# diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+format =  " [at](bold white) [$symbol$branch]($style)[](base) [on ](bold white)"
 
 [git_status]
 format = "[$untracked$staged$modified$renamed$conflicted$ahead_behind ]($style)"
@@ -125,7 +127,7 @@ ignore_timeout = true
 
 
 [os]
-disabled = false
+disabled = true
 
 [os.symbols]
 Windows = "󰍲"
