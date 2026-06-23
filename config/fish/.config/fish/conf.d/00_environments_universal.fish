@@ -1,5 +1,7 @@
-set -Ux XDG_HOME_CONFIG ~/.config
-set -Ux XDG_HOME_CACHE  ~/.cache
+set -Ux XDG_CONFIG_HOME ~/.config
+set -Ux XDG_DATA_HOME ~/.local/share
+set -Ux XDG_STATE_HOME ~/.local/state
+set -Ux XDG_CACHE_HOME ~/.cache
 
 set -Ux SECRETS_DIR $HOME/.secrets/
 set -Ux NOTES_DIR   $HOME/Notes/

@@ -9,7 +9,7 @@ if status is-interactive
     abbr -a s "sesh"
     abbr -a sc "sesh connect"
 
-    abbr -a l  "eza -lah"
+    abbr -a l  "eza -lh"
     abbr -a cd "z"
 
     abbr -a lg "lazygit"
