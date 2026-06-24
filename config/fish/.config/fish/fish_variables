@@ -5,6 +5,8 @@ SETUVAR --export GTK_IM_MODULE:simple
 SETUVAR --export NOTES_DIR:/home/aviral/Notes/
 SETUVAR --export SECRETS_DIR:/home/aviral/\x2esecrets/
 SETUVAR --export SHELL:/bin/fish
-SETUVAR --export XDG_HOME_CACHE:/home/aviral/\x2ecache
-SETUVAR --export XDG_HOME_CONFIG:/home/aviral/\x2econfig
+SETUVAR --export XDG_CACHE_HOME:/home/aviral/\x2ecache
+SETUVAR --export XDG_CONFIG_HOME:/home/aviral/\x2econfig
+SETUVAR --export XDG_DATA_HOME:/home/aviral/\x2elocal/share
+SETUVAR --export XDG_STATE_HOME:/home/aviral/\x2elocal/state
 SETUVAR __fish_initialized:4300
