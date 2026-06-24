@@ -9,24 +9,37 @@ set({ "n", "v" }, "<C-p", '"+p', { desc = "Paste from clipboard --Control P" })
 
 -- QoL KeyBinds
 set("n", "<leader><leader>r", ":source % <CR>") -- source the entire file
+set("n", "K", function()
+	vim.lsp.buf.hover()
+end, {})
 
--- Buffers motion:
-set("n", "<C-j>", ":bnext<CR>", { desc = "Next buffer" })
-set("n", "<C-k>", ":bprevious<CR>", { desc = "Previous buffer" })
-set("n", "<C-h>", function()
-  if #vim.fn.getqflist() > 0 then
-    vim.cmd("cprev")
-  else
-    vim.cmd("wincmd h")
-  end
-end, { desc = "Previous in Quickfix" })
-set("n", "<C-l>", function()
-  if #vim.fn.getqflist() > 0 then
-    vim.cmd("cnext")
-  else
-    vim.cmd("wincmd l")
-  end
-end, { desc = "Next in Quickfix" })
+set("v", "J", ":m '>+1<CR>gv=gv", {})
+set("v", "K", ":m '<-2<CR>gv=gv", {})
+
+-- Buffers / Quickfix list motion:
+local function quickfix_open()
+	for _, win in ipairs(vim.api.nvim_list_wins()) do
+		local buf = vim.api.nvim_win_get_buf(win)
+		if vim.bo[buf].buftype == "quickfix" then
+			return true
+		end
+	end
+	return false
+end
+set("n", "<C-k>", function()
+	if quickfix_open() > 0 then
+		vim.cmd("cprev")
+	else
+		vim.cmd("bprev")
+	end
+end, { desc = "Buffer / Quickfix Prev" })
+set("n", "<C-j>", function()
+	if quickfix_open() > 0 then
+		vim.cmd("cnext")
+	else
+		vim.cmd("bnext")
+	end
+end, { desc = "Buffer / Quickfix Next" })
 
 -- Splits
 set("n", "<leader>vv", require("customKeybinds.splits").verticalSplit, { desc = "vertically split the window" })
