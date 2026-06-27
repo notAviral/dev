@@ -1,0 +1,29 @@
+[alias]
+    
+    st = status
+
+    cm = commit -m 
+    ca = commit -a 
+    cam = commit -am 
+    
+    co = checkout
+
+    s = switch 
+    
+    p = push
+    u = pull
+
+    b = branch 
+
+    cl = clone 
+
+    d = diff
+    l = log 
+
+    lg = log \
+        --graph \
+        --all \
+        --decorate \
+        --abbrev-commit \
+        --date=format:'%Y-%m-%d %H:%M' \
+        --pretty=format:'%C(auto)%h %C(yellow)%d%Creset%n│ %C(white)%s%Creset%n│ Author : %C(Cyan)%an%Creset <%C(green)%ae%Creset>%n│ Date : %C(green)%ad%Creset%n%n'

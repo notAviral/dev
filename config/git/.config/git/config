@@ -3,7 +3,7 @@
 # this is to upload my git config to GitHub without
 # worrying about my personal stuff
 [include]
-  path = "./config_personal"
+  path = "~/.config/git/modules/config_personal"
 
 # Machine Config :
 [core]
@@ -13,7 +13,7 @@
 
 # Commit Template :
 [commit]
-  template = "~/.config/git/git_commit_template.txt"
+  template = "~/.config/git/modules/git_commit_template.txt"
 
 # Personal Preferences :
 [init]
@@ -21,4 +21,5 @@
 
 # Functionality configs :
 [include]
-  path = "./opts_config"
+  path = "~/.config/git/modules/opts_config"
+    path = "~/.config/git/modules/aliases"
