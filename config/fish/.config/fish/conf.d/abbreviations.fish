@@ -16,4 +16,12 @@ if status is-interactive
 
     abbr -a g "git"
 
+    if command -v pacman >/dev/null then
+        if command -v paru >/dev/null then
+            abbr -a p "paru"
+        else 
+            abbr -a p "pacman"
+        end
+    end
+
 end

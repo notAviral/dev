@@ -1,7 +1,7 @@
 [[session]]
 
 name = "Foreman"
-path = "~/Projects/foreman"
+path = "~/Development/Projects/foreman"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
 windows = [ "fish", "curl", "lgit" ]

@@ -50,7 +50,7 @@ style_root = 'red'
 format = '[$user]($style)[@](bold white)'
 
 [hostname]
-disabled = false
+disabled = true
 style = 'bold magenta'
 ssh_only = false
 ssh_symbol = '󱚿 '
@@ -66,7 +66,7 @@ error_symbol = '[](bold fg:red)'
 vimcmd_symbol = '[:](bold fg:yellow)'
 
 [git_branch]
-symbol = ' '
+symbol = ' '
 style = 'bold magenta'
 format = '[ at git:\(](bold white)[$branch$symbol]($style)[\)](bold white)'
 

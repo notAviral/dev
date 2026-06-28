@@ -1,17 +1,20 @@
---[[
--- This is my main Neovim config
--- author - Aviral Dubey
---]]
+--- ------------------------
+--- Neovim Config
+--- Author - Aviral Dubey
+--- twitter - aviraldb
+--- email - aviraldubey@protonmail.com
+--- ------------------------
 
--- Importing the options :
-require("core.opts")
+-- Setting Vim Options
+require("core.options")
 
--- Installing and Sourcing Lazy Pluggin Manager :
-require("core.lazy")
+-- BootStrap Lazy Plugin manager
+require("core.lazy").boot()
+require("core.lazy").setup()
 
--- Importing keybinds :
-require("Plugins.keybinds")
-require("core.keybinds")
+-- Setting up LSP Support
+require("core.lang.lsp")
+require("core.lang.mason")
 
--- Importing Extra Modules :
-require("core.extras")
+-- Setting up Keymaps
+require("keymaps")

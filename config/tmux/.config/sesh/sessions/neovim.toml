@@ -1,0 +1,19 @@
+[[session]]
+name = "Neovim"
+path = "~/Development/Projects/neovim/"
+startup_command = "vim ."
+preview_command = "eza --all --git --icons --color=always {}"
+windows = [ "oldvim", "fish", "fish" ]
+
+[[window]]
+name = "oldvim"
+startup_script = """
+cd ~/.config/nvim
+vim .
+"""
+
+[[window]]
+name = "fish"
+startup_script = """
+alias neovim 'NVIM_APPNAME=neovim nvim'
+"""

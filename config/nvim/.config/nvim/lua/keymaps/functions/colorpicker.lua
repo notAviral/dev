@@ -1,0 +1,29 @@
+local cache = vim.fn.stdpath("config") .. "/after/plugin/colorscheme.lua"
+
+local function colorpicker()
+	local builtin = require("telescope.builtin")
+	builtin.colorscheme({
+		enable_preview = true,
+		attach_mappings = function(prompt_bufnr, _)
+			local actions = require("telescope.actions")
+			local action_state = require("telescope.actions.state")
+			actions.select_default:replace(function()
+				actions.close(prompt_bufnr)
+				local selection = action_state.get_selected_entry()
+				if not selection then
+					return
+				end -- guard against nil
+				local scheme = selection[1]
+				vim.cmd("colorscheme " .. scheme)
+				local file = io.open(cache, "w")
+				if file then
+					file:write("vim.cmd('colorscheme " .. scheme .. "')")
+					file:close()
+				end
+			end)
+			return true
+		end,
+	})
+end
+
+vim.keymap.set("n", "<leader>cs", colorpicker, { desc = "Custom: Change colorscheme" })
