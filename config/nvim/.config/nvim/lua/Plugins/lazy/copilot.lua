@@ -7,7 +7,6 @@ return {
 		},
 		build = "make tiktoken",
 		opts = {
-
 			model = "claude-haiku-4.5",
 			temperature = 0.1,
 			trusted_tools = nil,
