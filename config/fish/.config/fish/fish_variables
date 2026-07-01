@@ -10,3 +10,4 @@ SETUVAR --export XDG_CONFIG_HOME:/home/aviral/\x2econfig
 SETUVAR --export XDG_DATA_HOME:/home/aviral/\x2elocal/share
 SETUVAR --export XDG_STATE_HOME:/home/aviral/\x2elocal/state
 SETUVAR __fish_initialized:4300
+SETUVAR fish_user_paths:/home/aviral/\x2econfig/emacs/bin
