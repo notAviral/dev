@@ -1,20 +1,17 @@
 return {
     {
         "folke/tokyonight.nvim",
-        name = "Tokyonight",
         lazy = false,
         priority = 1000,
         opts = {},
     },
     {
         "catppuccin/nvim",
-        name = "Catppuccin",
         lazy = false,
         priority = 1000
     },
     {
         "RedsXDD/neopywal.nvim",
-        name = "Neopywal",
         lazy = false,
         priority = 1000,
         opts = {
@@ -28,7 +25,6 @@ return {
     },
     {
         "bjarneo/pixel.nvim",
-        name = "Pixel",
         lazy = false,
         priority = 1000,
     },

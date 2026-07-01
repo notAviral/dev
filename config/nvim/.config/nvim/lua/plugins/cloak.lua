@@ -1,9 +1,8 @@
 return {
     "laytan/cloak.nvim",
-    name = "Cloak",
     lazy = false,
     priority = 500,
-    dependecies = { },
+    dependecies = {},
     opts = {
         enabled = true,
         cloak_character = "*",

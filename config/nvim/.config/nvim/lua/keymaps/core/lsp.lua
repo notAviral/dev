@@ -15,7 +15,7 @@ function M.on_attach(client, bufnr)
 
     -- info
     map("n", "K", vim.lsp.buf.hover, "LSP: Hover docs")
-    map("n", "<C-h>", vim.lsp.buf.signature_help, "LSP: Signature help")
+    map("n", "<C-s>", vim.lsp.buf.signature_help, "LSP: Signature help")
 
     -- actions
     map("n", "<leader>rn", vim.lsp.buf.rename, "LSP: Rename")

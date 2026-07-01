@@ -1,5 +1,14 @@
 local M = {}
 
+-- LSP Servers Native
+M.servers = {
+    "lua_ls",
+    "clangd",
+    "rust_analyser",
+    "gopls",
+    "org",
+}
+
 -- Treesitter parsers
 M.parsers = {
     "rust",
@@ -16,29 +25,23 @@ M.parsers = {
     "bash",
 }
 
--- LSP Servers Native
-M.servers = {
-    "lua_ls",
-    "clangd",
-    "rust_analyser",
-    "gopls",
-}
-
 -- Formatters (Conform backend)
 M.formatters = {
-    c    = { "clang-format" },
-    cpp  = { "clang-format" },
-    go   = { "gofumpt", "goimports" },
-    rust = { "rustfmt" },
-    lua  = { "stylua" },
+    c      = { "clang-format" },
+    cpp    = { "clang-format" },
+    go     = { "gofumpt", "goimports" },
+    rust   = { "rustfmt" },
+    lua    = { "stylua" },
+    python = { "ruff" },
 }
 
 -- Linters (nvim-lint backend)
 M.linters = {
-    c   = { "clangtidy" },
-    cpp = { "clangtidy" },
-    go  = {},
-    lua = { "luacheck" },
+    c      = { "clangtidy" },
+    cpp    = { "clangtidy" },
+    go     = {},
+    lua    = { "luacheck" },
+    python = { "ruff" },
 }
 
 -- Mason Packages
@@ -53,6 +56,7 @@ M.packages = {
     "gofumpt",
     "goimports",
     "stylua",
+    "ruff",
     -- linters
     "golangci-lint",
     "luacheck",

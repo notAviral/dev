@@ -4,6 +4,8 @@ require("keymaps.plugins.telescope")
 require("keymaps.plugins.git")
 require("keymaps.plugins.agents")
 require("keymaps.plugins.nvimTmuxNavigation")
+require("keymaps.plugins.harpoon")
+require("keymaps.plugins.notes")
 
 -- Import Functions
 require("keymaps.functions.buf-qf")

@@ -6,11 +6,15 @@ vim.g.mapleader = " "
 -- Vim Keymaps timeouts
 vim.timeoutlen = 400
 
+-- Vim makeprgs
+vim.opt.makeprg = "just"
+
 -- Visual Options
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.scrolloff = math.floor(vim.o.lines / 2)
 vim.opt.termguicolors = true
+vim.opt.signcolumn = "yes:1"
 
 -- Wrapping behavior
 vim.opt.wrap = true
@@ -42,5 +46,10 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 
--- Vim UI 2 
+-- Vim UI 2
 require("vim._core.ui2").enable()
+
+-- Enable some features
+vim.cmd.packadd("nvim.undotree")
+vim.cmd.packadd("nvim.difftool")
+vim.cmd.packadd("nvim.tohtml")

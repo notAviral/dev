@@ -1,16 +1,15 @@
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-        name = "Treesitter",
-		lazy = false,
-		build = ":TSUpdate",
+    {
+        "nvim-treesitter/nvim-treesitter",
+        lazy = false,
+        build = ":TSUpdate",
         opts = { install_dir = vim.fn.stdpath("data") .. "/parsers" },
-		config = function()
+        config = function()
             local parsers = require("core.langTools").parsers
-			require("nvim-treesitter").install(parsers)
-			vim.treesitter.language.register("markdown", "markdown")
-		end,
-	},
+            require("nvim-treesitter").install(parsers)
+            vim.treesitter.language.register("markdown", "markdown")
+        end,
+    },
     {
         "saghen/blink.cmp",
         lazy = true,
@@ -42,11 +41,17 @@ return {
                 default = { "lsp", "path", "buffer", "snippets" },
             },
             snippets = {
-                preset = "luasnip",   -- tell blink to use luasnip as the engine
+                preset = "luasnip", -- tell blink to use luasnip as the engine
             },
             fuzzy = { implementation = "prefer_rust_with_warning" },
+            cmdline = {
+                enabled = true,
+                keymap = { preset = "cmdline" },
+                completion = {
+                    menu = { auto_show = true },
+                },
+            },
         },
-        opts_extend = { "sources.default" },
     },
     {
         "L3MON4D3/LuaSnip",

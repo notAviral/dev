@@ -25,8 +25,7 @@ vim.keymap.set("n", "<leader>tj", builtin.jumplist, { desc = "Telescope: Jumplis
 
 -- Vim Help Pickers
 vim.keymap.set("n", "<leader>th", builtin.builtin, { desc = "Telescope: Builtin Pickers" })
-vim.keymap.set("n", "<leader>sh", ":Telescope help_tags <CR>", { desc = "Telescope: Show Help Tags" })
+vim.keymap.set("n", "<leader>sh", ":Telescope help_tags <CR>", { desc = "Telescope: Show Vim Help Tags" })
 vim.keymap.set("n", "<leader>sk", ":Telescope keymaps <CR>", { desc = "Telescope: Show Keybinds" })
 vim.keymap.set("n", "<leader>vc", builtin.commands, { desc = "Telescope: Commands" })
 vim.keymap.set("n", "<leader>vo", builtin.vim_options, { desc = "Telescope: Vim Options" })
-vim.keymap.set("n", "<leader>vh", builtin.help_tags, { desc = "Telescope: Vim Help" })

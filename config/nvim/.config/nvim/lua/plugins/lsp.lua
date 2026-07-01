@@ -1,7 +1,6 @@
 return {
     {
         "williamboman/mason.nvim",
-        name = "Mason",
         cmd = "Mason",
         dependencies = { 'mfussenegger/nvim-lint', name = "VimLint" },
         opts = {
@@ -12,7 +11,7 @@ return {
                     package_uninstalled = "✗",
                 },
                 check_outdated_package_on_open = true,
-                border = "None",
+                border = nil,
                 backdrop = 80,
                 width = 1.0,
                 height = 1.0,
@@ -21,7 +20,6 @@ return {
     },
     {
         'stevearc/conform.nvim',
-        name = "Conform",
         opts = {
             format_on_save = {
                 timeout_ms = 500,

@@ -1,7 +1,7 @@
 --- ------------------------
 --- Neovim Config
 --- Author - Aviral Dubey
---- twitter - aviraldb
+--- matrix - #aviraldb:matrix.org
 --- email - aviraldubey@protonmail.com
 --- ------------------------
 
@@ -18,3 +18,6 @@ require("core.lang.mason")
 
 -- Setting up Keymaps
 require("keymaps")
+
+-- Import Custom dash board
+require("core.dashboard")
