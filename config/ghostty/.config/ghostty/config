@@ -7,11 +7,11 @@
 theme                   = "TokyoNight Night"
 
 # Fonts : 
-font-family             = JetBrains Mono Nerd Font 
-font-family-bold        = JetBrains Mono NF Bold 
-font-family-italic      = JetBrains Mono NF Italic 
-font-family-bold-italic = JetBrains Mono NF Bold Italic
-font-size = 16
+font-family             = FiraCode Nerd Font Mono
+font-family-bold        = FiraCode Nerd Font Mono Bold
+font-family-italic      = FiraCode Nerd Font Mono Italic
+font-family-bold-italic = FiraCode Nerd Font Mono Bold Italic
+font-size = 15
 
 # Opacity and Blurness of the window : 
 background-opacity      = 0.90
@@ -38,10 +38,11 @@ scroll-to-bottom        = keystroke
 # KeyBinds : 
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+r=reload_config
+keybind = ctrl+shift+space=toggle_readonly
 
 # Window decorations :
 window-decoration       = none
 gtk-titlebar            = false
 
-# Miscellanious : 
-# initial-command         = fastfetch
+# Import shaders : 
+custom-shader = ./shaders/cursor_smear.glsl
