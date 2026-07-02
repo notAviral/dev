@@ -38,7 +38,7 @@ return {
                 documentation = { auto_show = false },
             },
             sources = {
-                default = { "lsp", "path", "buffer", "snippets" },
+                default = { "lsp", "snippets", "buffer", "path" },
             },
             snippets = {
                 preset = "luasnip", -- tell blink to use luasnip as the engine

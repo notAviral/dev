@@ -1,18 +1,23 @@
 return {
     {
         "folke/tokyonight.nvim",
-        lazy = false,
         priority = 1000,
-        opts = {},
     },
     {
         "catppuccin/nvim",
-        lazy = false,
+        priority = 1000
+    },
+    {
+        "rose-pine/neovim",
+        name = "rosepine",
+        priority = 1000,
+    },
+    {
+        "ellisonleao/gruvbox.nvim",
         priority = 1000
     },
     {
         "RedsXDD/neopywal.nvim",
-        lazy = false,
         priority = 1000,
         opts = {
             use_palette = "wallust",
@@ -25,7 +30,6 @@ return {
     },
     {
         "bjarneo/pixel.nvim",
-        lazy = false,
         priority = 1000,
     },
 }

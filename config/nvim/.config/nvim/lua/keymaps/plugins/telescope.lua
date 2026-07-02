@@ -20,7 +20,7 @@ vim.keymap.set("n", "<leader>ten", function()
 end, { desc = "Open Neovim Configs" })
 
 -- Other Navigations
-vim.keymap.set("n", "<leader>to", builtin.oldfiles, { desc = "Telescope: Recent Files" })
+vim.keymap.set("n", "<leader>rr", builtin.oldfiles, { desc = "Telescope: Recent Files" })
 vim.keymap.set("n", "<leader>tj", builtin.jumplist, { desc = "Telescope: Jumplists" })
 
 -- Vim Help Pickers

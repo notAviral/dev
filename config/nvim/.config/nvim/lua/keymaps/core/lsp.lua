@@ -7,18 +7,18 @@ function M.on_attach(client, bufnr)
     end
 
     -- navigation
-    map("n", "gd", vim.lsp.buf.definition, "LSP: Go to definition")
-    map("n", "gD", vim.lsp.buf.declaration, "LSP: Go to declaration")
-    map("n", "gi", vim.lsp.buf.implementation, "LSP: Go to implementation")
-    map("n", "gr", vim.lsp.buf.references, "LSP: References")
-    map("n", "gy", vim.lsp.buf.type_definition, "LSP: Go to type definition")
+    map({ "n", "v" }, "gd", vim.lsp.buf.definition, "LSP: Go to definition")
+    map({ "n", "v" }, "gD", vim.lsp.buf.declaration, "LSP: Go to declaration")
+    map({ "n", "v" }, "gi", vim.lsp.buf.implementation, "LSP: Go to implementation")
+    map({ "n", "v" }, "gr", vim.lsp.buf.references, "LSP: References")
+    map({ "n", "v" }, "gy", vim.lsp.buf.type_definition, "LSP: Go to type definition")
 
     -- info
-    map("n", "K", vim.lsp.buf.hover, "LSP: Hover docs")
-    map("n", "<C-s>", vim.lsp.buf.signature_help, "LSP: Signature help")
+    map({ "n", "v" }, "K", vim.lsp.buf.hover, "LSP: Hover docs")
+    map({ "n", "v", "i" }, "<C-s>", vim.lsp.buf.signature_help, "LSP: Signature help")
 
     -- actions
-    map("n", "<leader>rn", vim.lsp.buf.rename, "LSP: Rename")
+    map({ "n", "v", "x" }, "<leader>rn", vim.lsp.buf.rename, "LSP: Rename")
     map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, "LSP: Code action")
 
     -- diagnostics
