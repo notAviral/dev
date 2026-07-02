@@ -2,12 +2,18 @@
 if status is-interactive 
 
     # Zoxide support:
-    zoxide init fish | source
+    if type -q zoxide
+        zoxide init fish | source
+    end
 
     # Fzf support:
-    fzf --fish | source
+    if type -q fzf
+        fzf --fish | source
+    end
 
     # Direnv support:
-    direnv hook fish | source
+    if type -q direnv
+        direnv hook fish | source
+    end
 
 end

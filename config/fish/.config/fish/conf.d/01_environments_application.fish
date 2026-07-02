@@ -27,3 +27,6 @@ set -gx ANDROID_HOME "$HOME/.local/share/android"
 
 # Gradle (if you ever use it)
 set -gx GRADLE_USER_HOME "$HOME/.local/share/gradle"
+
+# Man pages 
+set -gx MANPAGER "less -R  --use-color -Dd+r -Du+b"
