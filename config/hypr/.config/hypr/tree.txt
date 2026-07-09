@@ -1,0 +1,53 @@
+.
+├── .gitignore
+├── hyprland_default.lua
+├── hyprland.lua
+├── hyprpaper.conf
+├── .luarc.json
+├── modules
+│   ├── animations
+│   │   └── init.lua
+│   ├── appearance
+│   │   ├── blur.lua
+│   │   ├── colors.lua
+│   │   ├── decorations.lua
+│   │   ├── general.lua
+│   │   ├── glow.lua
+│   │   ├── init.lua
+│   │   ├── motion_blur.lua
+│   │   └── shadows.lua
+│   ├── autoruns.lua
+│   ├── env.lua
+│   ├── functions
+│   │   └── functions.lua
+│   ├── gestures.lua
+│   ├── inputs
+│   │   ├── init.lua
+│   │   ├── keyboard.lua
+│   │   └── mouse.lua
+│   ├── keybinds
+│   │   ├── init.lua
+│   │   ├── media.lua
+│   │   ├── miscellaneous.lua
+│   │   ├── peripherals.lua
+│   │   ├── programs.lua
+│   │   ├── submaps.lua
+│   │   ├── utilities.lua
+│   │   ├── windows.lua
+│   │   └── workspaces.lua
+│   ├── monitors.lua
+│   ├── options.lua
+│   ├── themes
+│   │   └── colors
+│   │       └── init.lua
+│   ├── vars
+│   │   ├── programs.lua
+│   │   └── utilities.lua
+│   ├── window_rules
+│   │   ├── floater.lua
+│   │   ├── floating.lua
+│   │   └── init.lua
+│   └── xwayland.lua
+└── tree.txt
+
+11 directories, 40 files

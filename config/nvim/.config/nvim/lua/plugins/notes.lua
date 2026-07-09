@@ -38,17 +38,8 @@ return {
         },
     },
     {
-        'nvim-orgmode/orgmode',
-        event = 'VeryLazy',
-        opts = {
-            org_agenda_files = {
-                '~/Knowledge/Orgfiles/**/*.org',
-            },
-            org_default_notes_file = '~/Knowledge/Orgfiles/refile.org',
-        }
-    },
-    {
         "obsidian-nvim/obsidian.nvim",
+        event = "VeryLazy",
         version = "*",
 
         dependencies = {

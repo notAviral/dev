@@ -33,6 +33,8 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 -- Best search settings :)
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 

@@ -7,6 +7,7 @@ M.servers = {
     "rust_analyser",
     "gopls",
     "org",
+    "qmlls",
 }
 
 -- Treesitter parsers
@@ -23,6 +24,7 @@ M.parsers = {
     "yaml",
     "lua",
     "bash",
+    "qmljs",
 }
 
 -- Formatters (Conform backend)
@@ -51,6 +53,7 @@ M.packages = {
     "gopls",
     "rust-analyzer",
     "lua-language-server",
+    "qmlls",
     -- formatters
     "clang-format",
     "gofumpt",

@@ -20,4 +20,4 @@ neovim.template     = "neopywal.vim"
 neovim.target       = "~/.cache/wallust/colors_neopywal.vim"
 
 [hooks]
-hyprpaper = "hyprctl hyprpaper reload"
+hyprpaper = "hyprctl reload"

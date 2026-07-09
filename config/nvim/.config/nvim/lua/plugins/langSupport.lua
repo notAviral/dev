@@ -1,12 +1,19 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        lazy = false,
+        lazy = true,
+        event = { 'BufNewFile', 'BufReadPre' },
         build = ":TSUpdate",
-        opts = { install_dir = vim.fn.stdpath("data") .. "/parsers" },
         config = function()
             local parsers = require("core.langTools").parsers
             require("nvim-treesitter").install(parsers)
+            require("nvim-treesitter").setup({
+                install_dir = vim.fn.stdpath('data') .. "/site"
+            })
+            -- Indentation
+            vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+            vim.wo[0][0].foldmethod = 'expr'
             vim.treesitter.language.register("markdown", "markdown")
         end,
     },

@@ -4,7 +4,8 @@
 
 # Theme 
 # theme                   = "colors_wallust.conf"
-theme                   = "TokyoNight Night"
+theme                   = "colors_matugen.conf"
+# theme                   = "TokyoNight Night"
 
 # Fonts : 
 font-family             = FiraCode Nerd Font Mono
@@ -14,9 +15,10 @@ font-family-bold-italic = FiraCode Nerd Font Mono Bold Italic
 font-size = 15
 
 # Opacity and Blurness of the window : 
-background-opacity      = 0.90
-background-blur         = 80                        
+background-opacity      = 0.40
 # blur doesn't works in x11 with gnome but will work with hyprland
+#
+confirm-close-surface   = false
 
 # BackGround and ForeGround Colors :
 # (needs to be updated when using hyprland to get backgroud related Colors)
@@ -39,6 +41,7 @@ scroll-to-bottom        = keystroke
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+r=reload_config
 keybind = ctrl+shift+space=toggle_readonly
+keybind = ctrl+,=unbind
 
 # Window decorations :
 window-decoration       = none

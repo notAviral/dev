@@ -4,9 +4,8 @@ return {
         lazy = true,
         cmd = "Neogit",
         dependencies = {
-            { "sindrets/diffview.nvim",        name = "Diffview",  cmd = { "DiffviewOpen", "DiffviewClose" }, lazy = true, },
-            { "m00qek/baleia.nvim",            name = "Baleia",    lazy = true, },
-            { "nvim-telescope/telescope.nvim", name = "Telescope", lazy = true, },
+            { "sindrets/diffview.nvim" },
+            { "m00qek/baleia.nvim" },
         },
     },
     {

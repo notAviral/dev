@@ -20,7 +20,7 @@ if status is-interactive
         if command -v paru >/dev/null then
             abbr -a p "paru"
         else 
-            abbr -a p "pacman"
+            abbr -a p "sudo pacman"
         end
     end
 

@@ -11,8 +11,11 @@ return {
                 allFeatures = true,
             },
             inlayHints = {
-                enable = true,
-            },
+                typeHints = { enable = true },
+                parameterHints = { enable = true },
+                chainingHints = { enable = true },
+                closureReturnTypeHints = { enable = true },
+            }
         },
     },
 }

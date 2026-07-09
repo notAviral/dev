@@ -14,7 +14,7 @@ function M.on_attach(client, bufnr)
     map({ "n", "v" }, "gy", vim.lsp.buf.type_definition, "LSP: Go to type definition")
 
     -- info
-    map({ "n", "v" }, "K", vim.lsp.buf.hover, "LSP: Hover docs")
+    map("n", "K", vim.lsp.buf.hover, "LSP: Hover docs")
     map({ "n", "v", "i" }, "<C-s>", vim.lsp.buf.signature_help, "LSP: Signature help")
 
     -- actions

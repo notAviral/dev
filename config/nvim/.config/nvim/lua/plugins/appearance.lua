@@ -33,4 +33,8 @@ return {
             virtual_symbol = " ",
         },
     },
+    {
+        "xiyaowong/transparent.nvim",
+        priorty = 1000,
+    }
 }

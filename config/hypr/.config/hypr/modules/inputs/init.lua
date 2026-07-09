@@ -1,4 +1,4 @@
 --- Inputs ---
 
-require("modules.inputs.defualts")
-require("modules.inputs.misc")
+require("modules.inputs.keyboard")
+require("modules.inputs.mouse")

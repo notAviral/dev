@@ -1,0 +1,9 @@
+--target=$HOME
+--verbose=2
+--restow
+
+--ignore=.git
+--ignore=.gitignore
+--ignore=.stowrc
+--ignore=README.md
+--ignore=LICENSE

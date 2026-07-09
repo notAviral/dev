@@ -1,17 +1,23 @@
 
 [config]
-generate_terminal = true
-reload_apps = true
+generate_terminal = false
+reload_apps = false
 set_wallpaper = false
 
 [wallpaper]
 command = "swww"
 arguments = ["img"]
-set = true
+set = false
 
 [templates.kitty]
 input_path = "./templates/kitty.conf"
 output_path = "~/.config/kitty/colors-matugen.conf"
+post_hook = 'kill -SIGUSR1 $(pgrep -x kitty) >/dev/null'
+
+[templates.ghostty]
+input_path = "./templates/ghostty.conf"
+output_path = "~/.config/ghostty/themes/colors_matugen.conf"
+post_hook = 'pkill -SIGUSR2 ghostty >/dev/null'
 
 [templates.wofi]
 input_path = "./templates/wofi-colors.css"
@@ -20,3 +26,19 @@ output_path = "~/.config/wofi/colors.css"
 [templates.waybar]
 input_path = "./templates/waybar.css"
 output_path = "~/.config/waybar/colors.css"
+
+[templates.hyprpaper]
+input_path = './templates/hyprpaper.conf'
+output_path = '~/.config/hypr/hyprpaper.conf'
+post_hook = 'hyprctl reload'
+
+[templates.neovim]
+input_path = "./templates/neovim.lua"
+output_path = "~/.config/nvim/lua/assets/matugen.lua"
+post_hook   = '''
+pkill -SIGUSR1 -x nvim || :
+'''
+
+[templates.athena]
+input_path = "./templates/athena.qml"
+output_path = "~/.config/quickshell/athena/config/Colors.qml"

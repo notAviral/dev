@@ -11,10 +11,23 @@ return {
         "rose-pine/neovim",
         name = "rosepine",
         priority = 1000,
+        opts = {
+            style = {
+                transparency = true,
+            }
+        }
     },
     {
         "ellisonleao/gruvbox.nvim",
-        priority = 1000
+        priority = 1000,
+    },
+    {
+        'nvim-mini/mini.base16',
+        priority = 1000,
+        config = function()
+            --Import custom colorscheme
+            require("assets.matugen")
+        end
     },
     {
         "RedsXDD/neopywal.nvim",

@@ -1,3 +1,3 @@
 --- Window rules ---
 
-require("modules.window_rules.floater")
+require("modules.window_rules.floating")
