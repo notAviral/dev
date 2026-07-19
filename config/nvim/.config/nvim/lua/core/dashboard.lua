@@ -18,7 +18,7 @@ local defaults = {
         { key = "r", desc = "Recent files", action = ":Telescope oldfiles<CR>" },
         { key = "n", desc = "New file",     action = ":enew<CR>" },
         { key = "q", desc = "Quit",         action = ":q<CR>" },
-        { key = "L", desc = "Leetcode",     action = ":LeetOpen<CR>" },
+        { key = "L", desc = "Leetcode",     action = ":Leet<CR>" },
     },
     menu_key_hl = { fg = "#e0af68", bold = true }, -- the "[ f ]" part only
 }

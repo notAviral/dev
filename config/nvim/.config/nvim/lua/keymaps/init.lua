@@ -1,12 +1,3 @@
--- Import Plugins Keymaps
-require("keymaps.plugins.oil")
-require("keymaps.plugins.telescope")
-require("keymaps.plugins.git")
-require("keymaps.plugins.agents")
-require("keymaps.plugins.nvimTmuxNavigation")
-require("keymaps.plugins.harpoon")
-require("keymaps.plugins.notes")
-
 -- Import Functions
 require("keymaps.functions.buf-qf")
 require("keymaps.functions.colorpicker")
@@ -18,3 +9,7 @@ require("keymaps.core.qualityOfLife")
 require("keymaps.core.lsp")
 require("keymaps.core.utils")
 require("keymaps.core.terminal")
+
+-- All plugin specific keymaps are handled in lua.plugins
+-- within lazy spec with keys field.
+-- This is so, because it allows lazy loading these plugins

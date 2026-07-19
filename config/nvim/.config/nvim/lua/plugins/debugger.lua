@@ -1,0 +1,22 @@
+return {
+    -- {
+    --     "mfussenegger/nvim-dap",
+    --     lazy = true,
+    -- },
+    -- {
+    --     'leoluz/nvim-dap-go',
+    --     lazy = true,
+    -- },
+    -- {
+    --     'rcarriga/nvim-dap-ui',
+    --     lazy = true,
+    -- },
+    -- {
+    --     'theHamsta/nvim-dap-virtual-text',
+    --     lazy = true,
+    -- },
+    -- {
+    --     'nvim-telescope/telescope-dap.nvim',
+    --     lazy = true,
+    -- },
+}

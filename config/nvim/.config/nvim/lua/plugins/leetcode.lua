@@ -1,7 +1,7 @@
 return {
     {
         "kawre/leetcode.nvim",
-        build = ":TSUpdate",
+        cmd = "Leet",
         dependencies = {
             { "nvim-telescope/telescope.nvim", },
             { "nvim-lua/plenary.nvim", },
@@ -18,6 +18,10 @@ return {
             plugins = { non_standalone = false },
             logging = true,
             picker = { provider = "telescope" },
+            description = {
+                position = "left",
+                width = "40%",
+            },
             hooks = {
                 ["enter"] = {},
                 ["question_enter"] = {},
@@ -44,14 +48,5 @@ return {
                 fold_imports = false,
             },
         },
-        config = function(_, opts)
-            require("leetcode").setup(opts)
-            vim.api.nvim_create_user_command("LeetOpen", function()
-                for _, buf in ipairs(vim.fn.getbufinfo({ buflisted = 1 })) do
-                    vim.bo[buf.bufnr].buflisted = false
-                end
-                vim.cmd("Leet")
-            end, {})
-        end
     },
 }

@@ -2,7 +2,8 @@ return {
     {
         "williamboman/mason.nvim",
         cmd = "Mason",
-        dependencies = { 'mfussenegger/nvim-lint', name = "VimLint" },
+        event = { 'BufNewFile', 'BufReadPre' },
+        dependencies = { 'mfussenegger/nvim-lint' },
         opts = {
             ui = {
                 icons = {
@@ -20,6 +21,7 @@ return {
     },
     {
         'stevearc/conform.nvim',
+        event = { 'BufNewFile', 'BufReadPre' },
         opts = {
             format_on_save = {
                 timeout_ms = 500,

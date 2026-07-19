@@ -12,8 +12,8 @@ return {
             })
             -- Indentation
             vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-            vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-            vim.wo[0][0].foldmethod = 'expr'
+            -- vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+            -- vim.wo[0][0].foldmethod = 'expr'
             vim.treesitter.language.register("markdown", "markdown")
         end,
     },
@@ -67,7 +67,6 @@ return {
         config = function()
             require("luasnip.loaders.from_vscode").lazy_load()
 
-            -- optional: your own snippets
             require("luasnip.loaders.from_vscode").lazy_load({
                 paths = { vim.fn.stdpath("config") .. "/snippets" },
             })
@@ -78,5 +77,22 @@ return {
                 enable_autosnippets = false,
             })
         end,
+    },
+    {
+        "MeanderingProgrammer/treesitter-modules.nvim",
+        lazy = true,
+        event = { 'BufNewFile', 'BufReadPre' },
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+        opts = {
+            incremental_selection = {
+                enable = true,
+                keymaps = {
+                    init_selection = "<C-y>",
+                    node_incremental = "<C-y>",
+                    scope_incremental = "<A-O>",
+                    node_decremental = "<BS>",
+                },
+            },
+        },
     },
 }

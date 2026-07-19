@@ -19,6 +19,3 @@ require("core.lang.mason")
 -- Setting up Keymaps
 require("keymaps")
 
--- Import Custom dash board
-require("core.dashboard")
-

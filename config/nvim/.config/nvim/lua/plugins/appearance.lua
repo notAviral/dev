@@ -2,7 +2,7 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         lazy = false,
-        dependencies = { { "nvim-tree/nvim-web-devicons", name = "Web-DevIcons" } },
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {
             options = {
                 component_separators = { left = "", right = "" },
@@ -27,7 +27,7 @@ return {
     {
         "brenoprata10/nvim-highlight-colors",
         lazy = true,
-        event = "BufEnter",
+        event = { "BufRead", "BufNewFile" },
         opts = {
             render = "virtual",
             virtual_symbol = " ",
@@ -35,6 +35,8 @@ return {
     },
     {
         "xiyaowong/transparent.nvim",
+        lazy = true,
+        cmd = { "TransparentEnable", "TransparentDisable", "TransparentToggle" },
         priorty = 1000,
     }
 }

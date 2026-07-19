@@ -68,7 +68,7 @@ vimcmd_symbol = '[λ](bold fg:yellow)'
 [git_branch]
 symbol = ' '
 style = 'bold magenta'
-format = '[ at git:\(](bold white)[$branch$symbol]($style)[\)](bold white)'
+format = '[ @ git:\(](bold white)[$branch$symbol]($style)[\)](bold white)'
 
 [git_status]
 format = '[ $untracked$staged$modified$renamed$conflicted$ahead_behind ]($style)'

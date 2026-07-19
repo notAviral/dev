@@ -7,6 +7,9 @@
 theme                   = "colors_matugen.conf"
 # theme                   = "TokyoNight Night"
 
+# vim mode
+config-file               = ?vim_mode.conf
+
 # Fonts : 
 font-family             = FiraCode Nerd Font Mono
 font-family-bold        = FiraCode Nerd Font Mono Bold
@@ -34,7 +37,7 @@ confirm-close-surface   = false
 cursor-style            = block 
 cursor-style-blink      = true 
 scroll-to-bottom        = keystroke
-
+click-repeat-interval   = 30
 
 
 # KeyBinds : 

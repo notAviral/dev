@@ -10,11 +10,11 @@ if status is-interactive
     abbr -a sc "sesh connect"
 
     abbr -a l  "eza -lh"
-    abbr -a cd "z"
 
     abbr -a lg "lazygit"
+    abbr -a ghd "gh dash"
 
-    abbr -a g "git"
+    abbr -a o 'xdg-open'
 
     if command -v pacman >/dev/null then
         if command -v paru >/dev/null then

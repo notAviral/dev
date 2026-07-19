@@ -39,15 +39,107 @@ return {
     },
     {
         "obsidian-nvim/obsidian.nvim",
-        event = "VeryLazy",
         version = "*",
-
         dependencies = {
             { "nvim-lua/plenary.nvim", },
             { "nvim-telescope/telescope.nvim", },
             { "nvim-treesitter/nvim-treesitter", },
         },
+        keys = {
+            -- Global mappings
+            { "<leader>on", "<cmd>Obsidian new<CR>",          desc = "Obsidian: New Note" },
+            { "<leader>os", "<cmd>Obsidian quick_switch<CR>", desc = "Obsidian: Quick Switch" },
+            { "<leader>og", "<cmd>Obsidian search<CR>",       desc = "Obsidian: Search Notes" },
+            { "<leader>od", "<cmd>Obsidian today<CR>",        desc = "Obsidian: Today's Note" },
+            { "<leader>oy", "<cmd>Obsidian yesterday<CR>",    desc = "Obsidian: Yesterday's Note" },
+            { "<leader>om", "<cmd>Obsidian tomorrow<CR>",     desc = "Obsidian: Tomorrow's Note" },
 
+            -- Markdown-only mappings
+            {
+                "<leader>of",
+                "<cmd>Obsidian follow_link<CR>",
+                ft = "markdown",
+                desc = "Obsidian: Follow Link",
+            },
+            {
+                "<leader>ob",
+                "<cmd>Obsidian backlinks<CR>",
+                ft = "markdown",
+                desc = "Obsidian: Backlinks",
+            },
+            {
+                "<leader>oT",
+                "<cmd>Obsidian tags<CR>",
+                ft = "markdown",
+                desc = "Obsidian: Tags",
+            },
+            {
+                "<leader>oi",
+                "<cmd>Obsidian links<CR>",
+                ft = "markdown",
+                desc = "Obsidian: Links",
+            },
+            {
+                "<leader>oc",
+                "<cmd>Obsidian toc<CR>",
+                ft = "markdown",
+                desc = "Obsidian: Table of Contents",
+            },
+
+            {
+                "<leader>ot",
+                "<cmd>Obsidian template<CR>",
+                ft = "markdown",
+                desc = "Obsidian: Insert Template",
+            },
+            {
+                "<leader>oN",
+                "<cmd>Obsidian new_from_template<CR>",
+                ft = "markdown",
+                desc = "Obsidian: New From Template",
+            },
+            {
+                "<leader>or",
+                "<cmd>Obsidian rename<CR>",
+                ft = "markdown",
+                desc = "Obsidian: Rename Note",
+            },
+            {
+                "<leader>oo",
+                "<cmd>Obsidian open<CR>",
+                ft = "markdown",
+                desc = "Obsidian: Open in Obsidian",
+            },
+
+            {
+                "<leader>ol",
+                "<cmd>Obsidian link<CR>",
+                mode = { "n", "v" },
+                ft = "markdown",
+                desc = "Obsidian: Link Selection",
+            },
+            {
+                "<leader>oL",
+                "<cmd>Obsidian link_new<CR>",
+                mode = "v",
+                ft = "markdown",
+                desc = "Obsidian: Create Linked Note",
+            },
+            {
+                "<leader>oe",
+                "<cmd>Obsidian extract_note<CR>",
+                mode = "v",
+                ft = "markdown",
+                desc = "Obsidian: Extract Note",
+            },
+
+            {
+                "<leader>ox",
+                "<cmd>Obsidian toggle_checkbox<CR>",
+                ft = "markdown",
+                desc = "Obsidian: Toggle Checkbox",
+            },
+        },
         opts = {
             legacy_commands = false,
             workspaces = {
@@ -134,7 +226,7 @@ return {
     {
         "lukas-reineke/headlines.nvim",
         ft = "org",
-        dependencies = { "nvim-treesitter/nvim-treesitter", name = "Treesitter" },
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
         opts = {
             markdown = { query = false },
         },

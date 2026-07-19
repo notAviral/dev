@@ -9,7 +9,7 @@ hl.config({
 
         numlock_by_default = true,
 
-        repeat_rate = 10, --per second
-        repeat_delay = 600, --ms
+        repeat_rate = 20,   --per second
+        repeat_delay = 250, --ms
     },
 })

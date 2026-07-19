@@ -4,8 +4,8 @@ hl.config({
         rounding_power = 1.5,
 
         -- Transparency :
-        active_opacity = 0.8,
-        inactive_opacity = 0.8,
+        active_opacity = 0.9,
+        inactive_opacity = 0.9,
         fullscreen_opacity = 1.0,
 
         dim_modal = true,

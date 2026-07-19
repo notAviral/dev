@@ -2,33 +2,25 @@ return {
     {
         "stevearc/oil.nvim",
         cmd = "Oil",
-        dependencies = {},
-        lazy = true,
+        lazy = false,
+        keys = {
+            {
+                "-",
+                "<cmd>Oil<CR>",
+                desc = "Oil: Open Parent Directory",
+            },
+            {
+                "<leader>e",
+                "<cmd>Oil<CR>",
+                desc = "Oil: Open Explorer as a Buffer",
+            },
+        },
         opts = {
-            default_file_browser = true,
+            default_file_explorer = true,
             view_options = {
                 show_hidden = true,
             },
             skip_confirm_for_simple_edits = true,
         },
-    },
-    {
-        "mikavilpas/yazi.nvim",
-        lazy = true,
-        cmd = "Yazi",
-        version = "*",
-        dependencies = {
-            { { "nvim-lua/plenary.nvim", lazy = true, name = "Plenary" } },
-        },
-        opts = {
-            open_for_directories = false,
-            keymaps = {
-                show_help = "<f1>",
-            },
-        },
-        init = function()
-            -- Mark netrw as loaded so it's not loaded at all.
-            vim.g.loaded_netrwPlugin = 1
-        end,
     },
 }

@@ -8,6 +8,7 @@ M.servers = {
     "gopls",
     "org",
     "qmlls",
+    "nil",
 }
 
 -- Treesitter parsers
@@ -25,6 +26,7 @@ M.parsers = {
     "lua",
     "bash",
     "qmljs",
+    "nix"
 }
 
 -- Formatters (Conform backend)
@@ -35,6 +37,7 @@ M.formatters = {
     rust   = { "rustfmt" },
     lua    = { "stylua" },
     python = { "ruff" },
+    nix    = { "nixfmt" },
 }
 
 -- Linters (nvim-lint backend)
@@ -44,6 +47,7 @@ M.linters = {
     go     = {},
     lua    = { "luacheck" },
     python = { "ruff" },
+    nix    = { "statix" },
 }
 
 -- Mason Packages
@@ -54,15 +58,18 @@ M.packages = {
     "rust-analyzer",
     "lua-language-server",
     "qmlls",
+    "nil",
     -- formatters
     "clang-format",
     "gofumpt",
     "goimports",
     "stylua",
     "ruff",
+    "nixfmt",
     -- linters
     "golangci-lint",
     "luacheck",
+    "statix",
 }
 
 return M

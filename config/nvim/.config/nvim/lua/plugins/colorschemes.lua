@@ -5,29 +5,23 @@ return {
     },
     {
         "catppuccin/nvim",
-        priority = 1000
+        priority = 1000,
     },
     {
         "rose-pine/neovim",
         name = "rosepine",
         priority = 1000,
         opts = {
-            style = {
-                transparency = true,
-            }
-        }
+            style = { transparency = true },
+        },
+    },
+    {
+        "rebelot/kanagawa.nvim",
+        priority = 1000,
     },
     {
         "ellisonleao/gruvbox.nvim",
         priority = 1000,
-    },
-    {
-        'nvim-mini/mini.base16',
-        priority = 1000,
-        config = function()
-            --Import custom colorscheme
-            require("assets.matugen")
-        end
     },
     {
         "RedsXDD/neopywal.nvim",
@@ -36,9 +30,7 @@ return {
             use_palette = "wallust",
             transparent_background = true,
             defualt_fileformats = true,
-            plugins = {
-                markdown = true,
-            },
+            plugins = { markdown = true },
         },
     },
     {
