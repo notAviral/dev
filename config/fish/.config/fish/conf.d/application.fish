@@ -1,6 +1,16 @@
 
 if status is-interactive 
 
+    # Git support:
+    if not type -q git 
+        set_color yellow
+        echo "[WARNING] Git not available."
+        echo "[WARNING] Please install git for your OS" 
+        set_color normal 
+    else 
+        source $XDG_CONFIG_HOME/fish/modules/git.fish
+    end
+
     # Zoxide support:
     if type -q zoxide
         zoxide init fish | source
@@ -17,5 +27,7 @@ if status is-interactive
     end
 
     # mise support
-    $HOME/.local/bin/mise activate fish | source
+    if type -q mise
+        $HOME/.local/bin/mise activate fish | source
+    end
 end

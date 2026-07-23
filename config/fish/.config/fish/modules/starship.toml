@@ -13,11 +13,19 @@ $directory\
 $line_break\
 $git_branch\
 $git_status\
-$nix_shell
+$nix_shell\
+$fill\
+$status
 $character"""
 
 [fill]
 symbol = ' '
+
+[status]
+disabled = false
+success_style = 'bold green'
+failure_style = 'bold red'
+format = '[\[$int\]]($style)'
 
 [nix_shell]
 symbol = ""
