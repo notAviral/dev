@@ -19,6 +19,9 @@ vim.opt.makeprg = "just"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Enable exrc support
+vim.o.exrc = true
+
 -- Visual Options
 vim.wo.number = true
 vim.wo.relativenumber = true

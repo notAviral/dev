@@ -10,5 +10,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-b>", "<C-b>zz")
 vim.keymap.set("n", "<C-f>", "<C-f>zz")
 
-vim.keymap.set("n", "<C-,>", ":tprevious<CR>")
-vim.keymap.set("n", "<C-.>", ":tnext<CR>")
+vim.keymap.set("n", "<C-,>", ":silent! tabprevious<CR>")
+vim.keymap.set("n", "<C-.>", ":silent! tabnext<CR>")
+
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")

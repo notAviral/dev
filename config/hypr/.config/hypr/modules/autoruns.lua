@@ -1,13 +1,14 @@
 -- Events
+local autorun = require("modules.vars.autoruns")
 
 local startup = {
-    "quickshell -c athena",
-    "hyprpaper",
-    "swaync",
+    autorun.bar,
+    autorun.wallpaper,
+    autorun.notification,
 }
 
 local config_update = {
-    "hyprpaper",
+    autorun.wallpaper,
 }
 
 -- Triggers

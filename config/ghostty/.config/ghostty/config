@@ -7,9 +7,6 @@
 theme                   = "colors_matugen.conf"
 # theme                   = "TokyoNight Night"
 
-# vim mode
-config-file               = ?vim_mode.conf
-
 # Fonts : 
 font-family             = FiraCode Nerd Font Mono
 font-family-bold        = FiraCode Nerd Font Mono Bold
