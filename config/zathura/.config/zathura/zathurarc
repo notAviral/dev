@@ -1,0 +1,26 @@
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+
+set recolor false
+
+# Keymaps : 
+map <C-u> scroll half-up
+map <C-d> scroll half-down
+
+map <C-b> scroll full-up
+map <C-f> scroll full-down
+
+map D toggle_page_mode
+map r reload
+map R rotate
+
+unmap F
+map F toggle_fullscreen
+
+map <C-k> zoom in 
+map <C-j> zoom out 
+
+map I recolor
+map P print
+
