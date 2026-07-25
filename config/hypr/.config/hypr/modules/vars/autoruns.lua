@@ -1,6 +1,6 @@
 local M = {
 
-    bar = "quickshell -c bar",
+    bar = "quickshell -c athena",
 
     wallpaper = "hyprpaper",
 
