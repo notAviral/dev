@@ -12,9 +12,7 @@ import = [
     "~/.config/sesh/sessions/foreman.toml",
     "~/.config/sesh/sessions/leetcode.toml",
     "~/.config/sesh/sessions/neovim.toml",
-    "~/.config/sesh/sessions/mati.toml",
-    "~/.config/sesh/sessions/muted.toml",
-    "~/.config/sesh/sessions/obsidian.toml",
+    "~/.config/sesh/sessions/rime.toml",
 ]
 
 [default_session]

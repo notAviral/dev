@@ -1,0 +1,7 @@
+import [ "~/.config/sesh/windows.toml" ]
+
+[[session]]
+name = "RimeOS"
+path = "~/Development/rime"
+startup_command = "nvim"
+window = [ "fish" ]

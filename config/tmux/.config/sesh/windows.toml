@@ -14,3 +14,13 @@ startup_script = "clear"
 [[window]]
 name = "zsh"
 startup_script = "clear"
+
+[[window]]
+name = "curl"
+startup_script = """
+tmux select-window -t 3
+tmux split-window -h
+tmux split-window -v
+tmux select-pane -t 1 && clear
+tmux resize-pane -x 100 && clear
+tmux select-window -t 1 && clear"""

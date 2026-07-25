@@ -1,0 +1,7 @@
+import [ "~/.config/sesh/windows.toml" ]
+
+[[session]]
+name = "Leetcode"
+path = "~/Knowledge/Development/leetcode"
+startup_command = "nvim -c Leet"
+windows = ['fish']
