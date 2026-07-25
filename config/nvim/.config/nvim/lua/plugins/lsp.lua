@@ -2,7 +2,13 @@ return {
     {
         "williamboman/mason.nvim",
         cmd = "Mason",
-        event = { 'BufNewFile', 'BufReadPre' },
+        event = {
+            'BufNewFile',
+            'BufReadPre',
+            "BufReadPost",
+            "BufWritePost",
+            "InsertLeave"
+        },
         dependencies = { 'mfussenegger/nvim-lint' },
         opts = {
             ui = {

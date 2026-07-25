@@ -2,13 +2,14 @@ local M = {}
 
 -- LSP Servers Native
 M.servers = {
-    "lua_ls",
-    "clangd",
-    "rust_analyser",
-    "gopls",
-    "org",
-    "qmlls",
-    "nil",
+    "lua_ls",        -- lua
+    "clangd",        -- c, cpp
+    "rust_analyser", -- rust
+    "gopls",         -- go
+    "org",           -- org
+    "qmlls",         -- qml
+    "nil",           -- nix
+    "expert",        -- elixir
 }
 
 -- Treesitter parsers
@@ -16,38 +17,41 @@ M.parsers = {
     "rust",
     "c",
     "go",
-    "cpp",
+    "elixir",
+    "nix",
+    "lua",
     "markdown",
     "markdown_inline",
     "latex",
     "python",
     "toml",
     "yaml",
-    "lua",
     "bash",
     "qmljs",
-    "nix"
+    "cpp",
 }
 
 -- Formatters (Conform backend)
 M.formatters = {
-    c      = { "clang-format" },
-    cpp    = { "clang-format" },
     go     = { "gofumpt", "goimports" },
     rust   = { "rustfmt" },
+    elixir = { "mix" }, --bundled with elixir installation
     lua    = { "stylua" },
     python = { "ruff" },
     nix    = { "nixfmt" },
+    c      = { "clang-format" },
+    cpp    = { "clang-format" },
 }
 
 -- Linters (nvim-lint backend)
 M.linters = {
-    c      = { "clangtidy" },
-    cpp    = { "clangtidy" },
     go     = {},
     lua    = { "luacheck" },
+    elixir = { "credo" },
     python = { "ruff" },
     nix    = { "statix" },
+    c      = { "clangtidy" },
+    cpp    = { "clangtidy" },
 }
 
 -- Mason Packages
@@ -56,6 +60,7 @@ M.packages = {
     "clangd",
     "gopls",
     "rust-analyzer",
+    "expert",
     "lua-language-server",
     "qmlls",
     "nil",

@@ -15,3 +15,6 @@ vim.keymap.set("n", "<C-.>", ":silent! tabnext<CR>")
 
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
+
+vim.keymap.set("c", "<C-j>", "<C-n>")
+vim.keymap.set("c", "<C-k>", "<C-p>")

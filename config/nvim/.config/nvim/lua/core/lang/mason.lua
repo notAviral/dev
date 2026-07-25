@@ -1,4 +1,4 @@
-local packages = require("core.langTools").packages
+local packages = require("core.langSpecs").packages
 
 local registry = require("mason-registry")
 registry.refresh(function()

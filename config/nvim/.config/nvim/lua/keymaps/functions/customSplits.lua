@@ -1,5 +1,3 @@
-local builtin = require("telescope.builtin")
-
 local function is_path(str)
     return str:match("^/") or str:match("^~/") or str:match("^%./") or str:match("^%.%./")
 end
@@ -10,17 +8,15 @@ end
 
 local function open_with_split(split_cmd)
     return function()
+        local builtin = require("telescope.builtin") -- deferred until keypress
         builtin.find_files({
             attach_mappings = function(_, map)
                 map("i", "<CR>", function(prompt_bufnr)
                     local action_state = require("telescope.actions.state")
                     local actions = require("telescope.actions")
-
                     local picker = action_state.get_current_picker(prompt_bufnr)
                     local input = picker:_get_prompt()
-
                     actions.close(prompt_bufnr)
-
                     if is_path(input) then
                         local file_path = expand_path(input)
                         vim.cmd(split_cmd .. " " .. vim.fn.fnameescape(file_path))
@@ -31,17 +27,13 @@ local function open_with_split(split_cmd)
                         end
                     end
                 end)
-
                 return true
             end,
         })
     end
 end
 
-if builtin ~= nil then
-    vim.keymap.set("n", "<leader>vv", open_with_split("vsplit"), { desc = "Custom: verticalSplit with telescope" })
-    vim.keymap.set("n", "<leader>hh", open_with_split("split"), { desc = "Custom: horizontalSplit with telescope" })
-
-    vim.keymap.set("n", "<leader>vs", "<cmd>vsplit<cr>", { desc = "Splits: Vertical" })
-    vim.keymap.set("n", "<leader>hs", "<cmd>split<cr>", { desc = "Splits: Horizontal" })
-end
+vim.keymap.set("n", "<leader>vv", open_with_split("vsplit"), { desc = "Custom: verticalSplit with telescope" })
+vim.keymap.set("n", "<leader>hh", open_with_split("split"), { desc = "Custom: horizontalSplit with telescope" })
+vim.keymap.set("n", "<leader>vs", "<cmd>vsplit<cr>", { desc = "Splits: Vertical" })
+vim.keymap.set("n", "<leader>hs", "<cmd>split<cr>", { desc = "Splits: Horizontal" })

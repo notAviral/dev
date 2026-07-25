@@ -51,6 +51,8 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
+
+-- Wild mode / Command mode
 vim.opt.wildignore = '.hg,.svn,*~,*.png,*.jpg,*.gif,*.min.js,*.swp,*.o,vendor,dist,_site'
 
 -- Conceal level

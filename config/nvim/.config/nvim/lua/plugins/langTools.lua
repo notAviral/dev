@@ -5,7 +5,7 @@ return {
         event = { 'BufNewFile', 'BufReadPre' },
         build = ":TSUpdate",
         config = function()
-            local parsers = require("core.langTools").parsers
+            local parsers = require("core.langSpecs").parsers
             require("nvim-treesitter").install(parsers)
             require("nvim-treesitter").setup({
                 install_dir = vim.fn.stdpath('data') .. "/site"

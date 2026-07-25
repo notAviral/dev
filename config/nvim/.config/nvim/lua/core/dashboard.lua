@@ -62,6 +62,22 @@ local function center_block(lines, win_width)
     return out
 end
 
+local function should_open_dashboard()
+    if vim.fn.argc() ~= 0 then return false end            -- files passed on cmdline
+    if vim.v.this_session ~= "" then return false end      -- restoring a session
+    if #vim.api.nvim_list_uis() == 0 then return false end -- headless/embedded
+    if vim.o.insertmode then return false end              -- started with -y
+
+    -- non-empty buffer (covers stdin pipe: `cmd | nvim -`)
+    local buf = vim.api.nvim_get_current_buf()
+    local line_count = vim.api.nvim_buf_line_count(buf)
+    if line_count > 1 then return false end
+    local first_line = vim.api.nvim_buf_get_lines(buf, 0, 1, false)[1]
+    if first_line and first_line ~= "" then return false end
+
+    return true
+end
+
 local function define_hl(name, spec)
     if type(spec) == "string" then
         vim.api.nvim_set_hl(0, name, { link = spec })
@@ -75,7 +91,7 @@ local function apply_highlights()
 end
 
 function M.open()
-    if vim.fn.argc() ~= 0 then return end
+    if should_open_dashboard() then return end
 
     local buf = vim.api.nvim_create_buf(false, true)
     vim.api.nvim_set_current_buf(buf)

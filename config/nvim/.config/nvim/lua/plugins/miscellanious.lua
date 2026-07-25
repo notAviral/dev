@@ -1,14 +1,21 @@
 return {
     {
         "m4xshen/hardtime.nvim",
-        enabled = false,
-        lazy = false,
+        enabled = true,
+        lazy = true,
+        event = "VeryLazy",
         dependencies = { "MunifTanjim/nui.nvim" },
-        opts = {},
+        opts = {
+            disabled_filetypes = {
+                ["leetcode.nvim"] = true,
+            },
+            max_time = 1000,
+            max_count = 5,
+        },
     },
     {
         "alexghergh/nvim-tmux-navigation",
-        lazy = false,
+        lazy = true,
         keys = {
             {
                 "<M-h>",

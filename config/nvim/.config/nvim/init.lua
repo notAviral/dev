@@ -19,3 +19,5 @@ require("core.lang.mason")
 -- Setting up Keymaps
 require("keymaps")
 
+-- Setup Debugging
+require("core.debugger")

@@ -119,55 +119,58 @@ return {
                 desc = "Telescope: Vim Options",
             },
         },
-        opts = {
-            defaults = {
-                layout_strategy = "horizontal",
-                prompt_prefix = " > ",
-                selection_caret = " ▸ ",
-                file_ignore_patterns = {
-                    "node_modules",
-                    "dist",
-                    "build",
-                    "%.git/",
-                },
-                dynamic_preview_title = true,
-                mappings = {
-                    i = {
-                        ["<C-j>"] = require("telescope.actions").move_selection_next,
-                        ["<C-k>"] = require("telescope.actions").move_selection_previous,
+        opts = function()
+            local actions = require("telescope.actions")
+            return {
+                defaults = {
+                    layout_strategy = "horizontal",
+                    prompt_prefix = " > ",
+                    selection_caret = " ▸ ",
+                    file_ignore_patterns = {
+                        "node_modules",
+                        "dist",
+                        "build",
+                        "%.git/",
+                    },
+                    dynamic_preview_title = true,
+                    mappings = {
+                        i = {
+                            ["<C-j>"] = actions.move_selection_next,
+                            ["<C-k>"] = actions.move_selection_previous,
+                        },
                     },
                 },
-            },
-            pickers = {
-                find_files = {
-                    hidden = true,
-                },
-                live_grep = {
-                    hidden = true,
-                },
-                commands = {
-                    layout_strategy = "center",
-                    layout_config = {
-                        center = { width = 0.7 },
+                pickers = {
+                    find_files = {
+                        hidden = true,
+                    },
+                    live_grep = {
+                        hidden = true,
+                    },
+                    commands = {
+                        layout_strategy = "center",
+                        layout_config = {
+                            center = { width = 0.7 },
+                        },
+                    },
+                    help_tags = {
+                        layout_strategy = "center",
+                    },
+                    vim_options = {
+                        layout_strategy = "center",
+                    },
+                    keymaps = {
+                        layout_strategy = "center",
+                        layout_config = {
+                            center = { width = 0.7 },
+                        },
+                    },
+                    builtin = {
+                        layout_strategy = "center",
                     },
                 },
-                help_tags = {
-                    layout_strategy = "center",
-                },
-                vim_options = {
-                    layout_strategy = "center",
-                },
-                keymaps = {
-                    layout_strategy = "center",
-                    layout_config = {
-                        center = { width = 0.7 },
-                    },
-                },
-                builtin = {
-                    layout_strategy = "center",
-                },
-            },
-        },
+            }
+        end,
     },
     {
         "ThePrimeagen/harpoon",
