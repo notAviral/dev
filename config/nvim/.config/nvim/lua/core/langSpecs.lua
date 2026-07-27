@@ -10,6 +10,8 @@ M.servers = {
     "qmlls",         -- qml
     "nil",           -- nix
     "expert",        -- elixir
+    "taplo",         -- TOML
+    "ymlls",         -- YAML
 }
 
 -- Treesitter parsers
@@ -41,6 +43,7 @@ M.formatters = {
     nix    = { "nixfmt" },
     c      = { "clang-format" },
     cpp    = { "clang-format" },
+    toml   = { "taplo" },
 }
 
 -- Linters (nvim-lint backend)
@@ -52,6 +55,7 @@ M.linters = {
     nix    = { "statix" },
     c      = { "clangtidy" },
     cpp    = { "clangtidy" },
+    yaml   = { "yamllint" },
 }
 
 -- Mason Packages
@@ -64,6 +68,8 @@ M.packages = {
     "lua-language-server",
     "qmlls",
     "nil",
+    "taplo",
+    "yaml-language-server",
     -- formatters
     "clang-format",
     "gofumpt",
@@ -75,6 +81,7 @@ M.packages = {
     "golangci-lint",
     "luacheck",
     "statix",
+    "yamllint",
 }
 
 return M

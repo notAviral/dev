@@ -12,9 +12,6 @@ vim.opt.mouse = 'a'
 -- Clipboard
 vim.opt.clipboard = 'unnamedplus'
 
--- Vim makeprgs
-vim.opt.makeprg = "just"
-
 -- Disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

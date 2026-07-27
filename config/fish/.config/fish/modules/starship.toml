@@ -14,7 +14,6 @@ $line_break\
 $git_branch\
 $git_status\
 $nix_shell\
-$fill\
 $status
 $character"""
 
