@@ -20,6 +20,7 @@ M.parsers = {
     "c",
     "go",
     "elixir",
+    "sql",
     "nix",
     "lua",
     "markdown",

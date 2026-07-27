@@ -46,6 +46,15 @@ return {
             },
             sources = {
                 default = { "lsp", "snippets", "buffer", "path" },
+                per_filetype = {
+                    sql = { 'snippets', 'dadbod', 'buffer' },
+                },
+            },
+            providers = {
+                dadbod = {
+                    name = "dadbod",
+                    module = "vim_dadbod_completion.blink",
+                },
             },
             snippets = {
                 preset = "luasnip", -- tell blink to use luasnip as the engine
