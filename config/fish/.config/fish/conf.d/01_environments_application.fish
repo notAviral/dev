@@ -29,4 +29,4 @@ set -gx ANDROID_HOME "$HOME/.local/share/android"
 set -gx GRADLE_USER_HOME "$HOME/.local/share/gradle"
 
 # Man pages 
-set -gx MANPAGER 'nvim -c "set ft=man" -'
+# set -gx MANPAGER 'nvim -c "set ft=man" -'

@@ -8,12 +8,19 @@ return {
             local parsers = require("core.langSpecs").parsers
             require("nvim-treesitter").install(parsers)
             require("nvim-treesitter").setup({
-                install_dir = vim.fn.stdpath('data') .. "/site"
+                install_dir = vim.fn.stdpath('data') .. "/site",
             })
+
+            -- Highlights
+            vim.api.nvim_create_autocmd('FileType', {
+                pattern = parsers,
+                callback = function()
+                    vim.treesitter.start()
+                end,
+            })
+
             -- Indentation
             vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-            -- vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-            -- vim.wo[0][0].foldmethod = 'expr'
             vim.treesitter.language.register("markdown", "markdown")
         end,
     },

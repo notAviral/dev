@@ -8,6 +8,7 @@ return {
         opts = {
             disabled_filetypes = {
                 ["leetcode.nvim"] = true,
+                ["pager"] = true,
             },
             max_time = 1000,
             max_count = 5,
@@ -39,17 +40,6 @@ return {
             },
         },
         opts = {},
-    },
-    {
-        "numToStr/Comment.nvim",
-        lazy = true,
-        event = { "BufRead", "BufNewFile" },
-        opts = {
-            toggler = {
-                line = "gcc",
-                block = "gbc",
-            },
-        },
     },
     {
         "cushycush/quickshell-completions.nvim",

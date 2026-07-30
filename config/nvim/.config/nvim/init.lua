@@ -19,5 +19,8 @@ require("core.lang.mason")
 -- Setting up Keymaps
 require("keymaps")
 
+-- Import autocommands
+require("core.autocmd")
+
 -- Setup Debugging
 require("core.debugger")

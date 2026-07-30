@@ -37,6 +37,7 @@ sort = -committerdate
 
 [tag]
 sort = -taggerdate
+gpgsign = true
 
 [interactive]
 diffFilter = diff-so-fancy --patch

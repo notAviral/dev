@@ -4,7 +4,7 @@ hl.config({
         kb_model = "",
         kb_layout = "us",
         kb_variant = "",
-        kb_options = "ctrl:nocaps",
+        kb_options = "",
         kb_rules = "",
 
         numlock_by_default = true,

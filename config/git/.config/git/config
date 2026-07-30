@@ -14,6 +14,7 @@
 # Commit Template :
 [commit]
   template = "~/.config/git/modules/git_commit_template.txt"
+    gpgsign = true
 
 # Personal Preferences :
 [init]

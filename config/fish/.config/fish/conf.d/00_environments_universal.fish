@@ -12,3 +12,4 @@ set -Ux EDITOR nvim
 set -Ux GTK_IM_MODULE simple
 
 set -gx NIX_BUILD_SHELL bash
+set -gx GPG_TTY (tty)
