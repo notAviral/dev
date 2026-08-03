@@ -1,0 +1,14 @@
+import = ["~/.config/sesh/windows.toml"]
+
+[[session]]
+name = "RimeOS"
+path = "~/Development/rime"
+startup_command = "nvim"
+windows = ["tlcNix"]
+
+[[window]]
+name = "tlcNix"
+startup_script = """
+cd ~/Development/Inspect/NixOS/; 
+nvim
+"""

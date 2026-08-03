@@ -1,8 +1,8 @@
-import [ "~/.config/sesh/windows.toml" ]
+import = ["~/.config/sesh/windows.toml"]
 
 [[session]]
 name = "Neovim"
 path = "~/Development/Projects/neovim/"
 startup_command = "vim ."
 preview_command = "eza --all --git --icons --color=always {}"
-windows = [ "oldvim", "fish", "fish" ]
+windows = ["oldvim", "fish", "fish"]

@@ -1,8 +1,8 @@
-import [ "~/.config/sesh/windows.toml" ]
+import = ["~/.config/sesh/windows.toml"]
 
 [[session]]
 name = "Foreman"
 path = "~/Development/Projects/foreman"
 startup_command = "nvim"
 preview_command = "eza --all --git --icons --color=always {}"
-windows = [ "fish", "curl", "lgit" ]
+windows = ["fish", "curl", "lgit"]

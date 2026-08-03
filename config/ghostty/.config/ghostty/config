@@ -14,14 +14,19 @@ font-family-italic      = FiraCode Nerd Font Mono Italic
 font-family-bold-italic = FiraCode Nerd Font Mono Bold Italic
 font-size = 15
 
+window-padding-balance  = true
+window-step-resize      = true
+window-padding-color    = background
+
 # Opacity and Blurness of the window : 
-background-opacity      = 0.40
+background-opacity      = 0.90
+background-blur-radius  = 20
 # blur doesn't works in x11 with gnome but will work with hyprland
 #
 confirm-close-surface   = false
 
 # BackGround and ForeGround Colors :
-# (needs to be updated when using hyprland to get backgroud related Colors)
+# (needs to be updated when using hyprland to get background related Colors)
 # backgroud               = RRGGBB
 # foreground              = RRGGBB 
 # selection-background    = RRGGBB
@@ -48,4 +53,4 @@ window-decoration       = none
 gtk-titlebar            = false
 
 # Import shaders : 
-custom-shader = ./shaders/cursor_smear.glsl
+custom-shader = ./shaders/cursor_warp.glsl

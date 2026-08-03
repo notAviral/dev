@@ -1,4 +1,4 @@
-import [ "~/.config/sesh/windows.toml" ]
+import = ["~/.config/sesh/windows.toml"]
 
 [[session]]
 name = "Leetcode"

@@ -7,6 +7,7 @@ local float = require("modules.functions.functions").float
 hl.bind("ALT" .. " + F4", hl.dsp.window.close())
 hl.bind("ALT" .. " + TAB", hl.dsp.focus({ last = true }))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
+hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", function() float("toggle") end)
 hl.bind(mainMod .. " + up", function() float("enable") end)
 hl.bind(mainMod .. " + down", function() float("disable") end)

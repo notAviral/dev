@@ -52,7 +52,7 @@ return {
                 documentation = { auto_show = false },
             },
             sources = {
-                default = { "lsp", "snippets", "buffer", "path" },
+                default = { "snippets", "lsp", "buffer", "path" },
                 per_filetype = {
                     sql = { 'snippets', 'dadbod', 'buffer' },
                 },

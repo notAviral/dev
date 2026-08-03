@@ -1,3 +1,8 @@
+hl.config({
+    general = {
+        layout = "scrolling"
+    }
+})
 if hl.get_config("general.layout") == "scrolling" then
     hl.config({
 

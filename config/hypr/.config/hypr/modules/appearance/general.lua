@@ -11,8 +11,6 @@ hl.config({
 
         border_size = 1,
 
-        layout = "master",
-
         resize_on_border = true,
         hover_icon_on_border = true,
         extend_border_grab_area = 10,

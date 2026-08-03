@@ -44,7 +44,7 @@ local function debug_start()
     require("keymaps.core.debugMaps")
 
     dap_loaded = true
-    vim.notify("Debugger loaded — ready to set breakpoints (<leader>db) and run (<F5>)", vim.log.levels.INFO)
+    vim.notify("Debugger loaded — ready to set breakpoints (<leader>B) and run (<F5>)", vim.log.levels.INFO)
 end
 
 local function debug_stop()
