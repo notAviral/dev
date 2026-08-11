@@ -22,6 +22,7 @@ vim.o.exrc = true
 -- Visual Options
 vim.wo.number = true
 vim.wo.relativenumber = true
+vim.o.cursorline = false
 vim.opt.scrolloff = math.floor(vim.o.lines / 2) - 15
 vim.opt.sidescrolloff = math.floor(vim.o.lines / 2) - 15
 vim.opt.termguicolors = true

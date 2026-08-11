@@ -23,4 +23,12 @@ if status is-interactive
         end
     end
 
+    abbr -a d "docker"
+    abbr -c docker c "compose"
+    abbr -c docker b -- "--build"
+
+    # Weirdest abbriviations 
+    abbr -a :q "exit"
+    abbr -a :qa "exit"
+
 end
