@@ -6,6 +6,7 @@ local startup = {
     autorun.wallpaper,
     autorun.notification,
     autorun.kanata.on,
+    autorun.polkit
 }
 
 local config_update = {

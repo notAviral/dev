@@ -6,6 +6,7 @@ return {
     opts = {
         enabled = true,
         cloak_character = "*",
+        cloak_length = 8,
         highlight_group = "Comment",
         patterns = {
             {

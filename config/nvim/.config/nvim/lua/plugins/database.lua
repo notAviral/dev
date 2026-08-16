@@ -28,7 +28,7 @@ return {
                 desc = "Dadbod: Open UI",
             },
         },
-        depedencies = {
+        dependencies = {
             "tpope/vim-dadbod",
             "kristijanhusak/vim-dadbod-completion",
         },

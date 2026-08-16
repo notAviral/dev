@@ -1,43 +1,43 @@
 /* Dark theme as default */
 :root {
     /* Primary Colors */
-    --primary: #e4c36c;
-    --on-primary: #3d2e00;
-    --primary-container: #584400;
-    --on-primary-container: #ffe08f;
+    --primary: #d8bafb;
+    --on-primary: #3c245a;
+    --primary-container: #533b72;
+    --on-primary-container: #eedcff;
     
     /* Secondary Colors */
-    --secondary: #d5c5a0;
-    --on-secondary: #392f15;
-    --secondary-container: #51462a;
-    --on-secondary-container: #f2e1bb;
+    --secondary: #cfc1da;
+    --on-secondary: #352d40;
+    --secondary-container: #4c4357;
+    --on-secondary-container: #ecddf7;
     
     /* Tertiary Colors */
-    --tertiary: #adcfad;
-    --on-tertiary: #1a361e;
-    --tertiary-container: #304d33;
-    --on-tertiary-container: #c9ecc8;
+    --tertiary: #f2b7c1;
+    --on-tertiary: #4b252d;
+    --tertiary-container: #653b43;
+    --on-tertiary-container: #ffd9de;
     
     /* Surface Colors */
-    --surface: #16130b;
-    --on-surface: #eae1d4;
-    --surface-variant: #4c4639;
-    --on-surface-variant: #cfc5b4;
-    --surface-container: #231f17;
-    --surface-container-high: #2e2a21;
-    --surface-container-highest: #39342b;
-    --surface-container-low: #1f1b13;
-    --surface-container-lowest: #110e07;
-    --surface-bright: #3d392f;
-    --surface-dim: #16130b;
+    --surface: #151218;
+    --on-surface: #e7e0e8;
+    --surface-variant: #4a454e;
+    --on-surface-variant: #ccc4cf;
+    --surface-container: #211e24;
+    --surface-container-high: #2c292f;
+    --surface-container-highest: #373339;
+    --surface-container-low: #1d1a20;
+    --surface-container-lowest: #100d12;
+    --surface-bright: #3b383e;
+    --surface-dim: #151218;
     
     /* Background Colors */
-    --background: #16130b;
-    --on-background: #eae1d4;
+    --background: #151218;
+    --on-background: #e7e0e8;
     
     /* Outline Colors */
-    --outline: #989080;
-    --outline-variant: #4c4639;
+    --outline: #958e99;
+    --outline-variant: #4a454e;
     
     /* Error Colors */
     --error: #ffb4ab;
@@ -48,9 +48,9 @@
     /* Additional Colors */
     --shadow: #000000;
     --scrim: #000000;
-    --inverse-surface: #eae1d4;
-    --inverse-on-surface: #343027;
-    --inverse-primary: #745b0c;
+    --inverse-surface: #e7e0e8;
+    --inverse-on-surface: #332f35;
+    --inverse-primary: #6c538c;
     
     /* Custom Wofi-specific colors */
     --wofi-bg: var(--surface-container);
@@ -63,37 +63,37 @@
 /* Light theme override (switched via data attribute) */
 :root[data-theme="light"] {
     /* Primary Colors */
-    --primary: #745b0c;
+    --primary: #6c538c;
     --on-primary: #ffffff;
-    --primary-container: #ffe08f;
-    --on-primary-container: #241a00;
+    --primary-container: #eedcff;
+    --on-primary-container: #260d44;
     
     /* Secondary Colors */
-    --secondary: #695d3f;
+    --secondary: #655a6f;
     --on-secondary: #ffffff;
-    --secondary-container: #f2e1bb;
-    --on-secondary-container: #231b04;
+    --secondary-container: #ecddf7;
+    --on-secondary-container: #20182a;
     
     /* Surface Colors */
-    --surface: #fff8f1;
-    --on-surface: #1f1b13;
-    --surface-variant: #ece1cf;
-    --on-surface-variant: #4c4639;
-    --surface-container: #f6eddf;
-    --surface-container-high: #f0e7d9;
-    --surface-container-highest: #eae1d4;
-    --surface-container-low: #fbf2e5;
+    --surface: #fff7ff;
+    --on-surface: #1d1a20;
+    --surface-variant: #e8e0eb;
+    --on-surface-variant: #4a454e;
+    --surface-container: #f3ecf4;
+    --surface-container-high: #ede6ee;
+    --surface-container-highest: #e7e0e8;
+    --surface-container-low: #f9f1f9;
     --surface-container-lowest: #ffffff;
-    --surface-bright: #fff8f1;
-    --surface-dim: #e1d9cc;
+    --surface-bright: #fff7ff;
+    --surface-dim: #dfd8e0;
     
     /* Background Colors */
-    --background: #fff8f1;
-    --on-background: #1f1b13;
+    --background: #fff7ff;
+    --on-background: #1d1a20;
     
     /* Outline Colors */
-    --outline: #7e7667;
-    --outline-variant: #cfc5b4;
+    --outline: #7b757f;
+    --outline-variant: #ccc4cf;
     
     /* Error Colors */
     --error: #ba1a1a;
@@ -104,7 +104,7 @@
     /* Additional Colors */
     --shadow: #000000;
     --scrim: #000000;
-    --inverse-surface: #343027;
-    --inverse-on-surface: #f9f0e2;
-    --inverse-primary: #e4c36c;
+    --inverse-surface: #332f35;
+    --inverse-on-surface: #f6eef6;
+    --inverse-primary: #d8bafb;
 }

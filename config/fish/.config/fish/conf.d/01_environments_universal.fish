@@ -9,6 +9,7 @@ set -Ux NOTES_DIR   $HOME/Notes/
 
 set -Ux SHELL (command -v fish)
 set -Ux EDITOR nvim
+set -gx BROWSER zen-browser
 
 set -Ux GTK_IM_MODULE simple
 

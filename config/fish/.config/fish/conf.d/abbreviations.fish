@@ -6,9 +6,11 @@ if status is-interactive
     abbr -a c "clear"
     abbr -a t "tmux"
 
+    abbr -a j "z"
+
     abbr -a leet "nvim -c Leet"
 
-    abbr -a l  "ls -lhF"
+    abbr -a l  "ls -lhAF"
 
     abbr -a lg "lazygit"
     abbr -a ghd "gh dash"

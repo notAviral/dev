@@ -4,7 +4,7 @@
 
 # Theme 
 # theme                   = "colors_wallust.conf"
-theme                   = "colors_matugen.conf"
+theme = noctalia
 # theme                   = "TokyoNight Night"
 
 # Fonts : 

@@ -15,18 +15,11 @@ vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
 
 vim.lsp.config("*", {
     on_attach = require("keymaps.core.lsp").on_attach,
-    capabilities = {
-        textDocument = {
-            completion = {
-                completionItem = {
-                    snippetSupport = true,
-                    resolveSupport = {
-                        properties = { "documentation", "detail", "additionalTextEdits" },
-                    },
-                },
-            },
-        },
-    },
+    capabilities = vim.tbl_deep_extend(
+        "force",
+        vim.lsp.protocol.make_client_capabilities(),
+        require("blink.cmp").get_lsp_capabilities()
+    ),
 })
 
 vim.diagnostic.config({

@@ -56,11 +56,11 @@ return {
                 per_filetype = {
                     sql = { 'snippets', 'dadbod', 'buffer' },
                 },
-            },
-            providers = {
-                dadbod = {
-                    name = "dadbod",
-                    module = "vim_dadbod_completion.blink",
+                providers = {
+                    dadbod = {
+                        name = "dadbod",
+                        module = "vim_dadbod_completion.blink",
+                    },
                 },
             },
             snippets = {

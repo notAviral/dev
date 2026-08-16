@@ -3,7 +3,8 @@ local Programs       = {}
 
 Programs.terminal    = "ghostty"
 Programs.fileManager = "nautilus"
-Programs.menu        = "pgrep rofi >/dev/null 2>&1 && killall rofi || rofi -show drun"
+-- Programs.menu        = "pgrep rofi >/dev/null 2>&1 && killall rofi || rofi -show drun"
+Programs.menu        = "pgrep fuzzel >/dev/null 2>&1 && killall fuzzel || fuzzel"
 Programs.blueman     = "blueman-manager"
 Programs.pdfViewer   = "zathura"
 Programs.pmanager    = "pkill affine && affine || affine"

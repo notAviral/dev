@@ -123,7 +123,28 @@ return {
             local actions = require("telescope.actions")
             return {
                 defaults = {
+                    border = true,
+                    dynamic_preview_title = false,
                     layout_strategy = "horizontal",
+                    layout_config = {
+                        bottom_pane = {
+                            height = 10,
+                            preview_cutoff = 120,
+                            prompt_position = "bottom"
+                        },
+                        center = {
+                            height = 0.4,
+                            preview_cutoff = 40,
+                            prompt_position = "top",
+                            width = 0.5
+                        },
+                        horizontal = {
+                            height = 0.9,
+                            preview_cutoff = 120,
+                            prompt_position = "bottom",
+                            width = 0.8
+                        },
+                    },
                     prompt_prefix = " > ",
                     selection_caret = " ▸ ",
                     file_ignore_patterns = {
@@ -132,7 +153,6 @@ return {
                         "build",
                         "%.git/",
                     },
-                    dynamic_preview_title = true,
                     mappings = {
                         i = {
                             ["<C-j>"] = actions.move_selection_next,
