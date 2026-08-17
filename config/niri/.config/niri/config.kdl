@@ -185,6 +185,8 @@ binds {
 
     // kill window
     Mod+Q repeat=false { close-window; }
+    Mod+C repeat=false { close-window; }
+    Alt+F4 repeat=false { close-window; }
 
     // Navigations
     Mod+H     { focus-column-left; }
@@ -280,7 +282,7 @@ binds {
     Mod+Shift+F { fullscreen-window; }
     Mod+M { maximize-window-to-edges; }
 
-    Mod+C { center-column; }
+    Mod+Shift+C { center-column; }
     Mod+W { toggle-column-tabbed-display; }
 
     Mod+Minus { set-column-width "-5%"; }

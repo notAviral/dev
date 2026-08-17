@@ -11,6 +11,11 @@ if status is-interactive
         source $XDG_CONFIG_HOME/fish/modules/git.fish
     end
 
+    # SSH Persistance
+    if not set -q SSH_AUTH_SOCK
+        eval (ssh-agent -c)
+    end
+
     # Zoxide support:
     if type -q zoxide
         zoxide init fish | source

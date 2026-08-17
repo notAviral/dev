@@ -10,7 +10,11 @@ if status is-interactive
 
     abbr -a leet "nvim -c Leet"
 
-    abbr -a l  "ls -lhAF"
+    if type -q eza 
+        abbr -a l "eza -lAh"
+    else
+        abbr -a l  "ls -lhAF"
+    end
 
     abbr -a lg "lazygit"
     abbr -a ghd "gh dash"
