@@ -7,6 +7,7 @@ if status is-interactive
     abbr -a t "tmux"
 
     abbr -a j "z"
+    abbr -a m "neomutt"
 
     abbr -a leet "nvim -c Leet"
 

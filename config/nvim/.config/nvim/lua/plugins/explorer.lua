@@ -20,6 +20,10 @@ return {
             view_options = {
                 show_hidden = true,
             },
+            keymaps = {
+                ["<C-v>"] = { "actions.select", opts = { vertical = true } },
+                ["<C-h>"] = { "actions.select", opts = { horizontal = true } },
+            },
             skip_confirm_for_simple_edits = true,
         },
     },
