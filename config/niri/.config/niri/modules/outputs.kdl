@@ -1,0 +1,10 @@
+output "eDP-1" {
+    // off
+    mode "1920x1080@120.030"
+    scale 1
+
+    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
+    transform "normal"
+    // Position in global monitor space (will consider scaling)
+    position x=0 y=0
+}

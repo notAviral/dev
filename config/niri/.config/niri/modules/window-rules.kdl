@@ -1,0 +1,30 @@
+// This applies to all 
+window-rule {
+    opacity 0.95
+    background-effect { blur true; }
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+// Apply with match conditions
+// Open the zen-browser picture-in-picture player as floating by default.
+window-rule {
+    match app-id=r#"zen-browser$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Allow floating
+window-rule {
+    match app-id=r#"org-tlauncher-tlauncher-rmo-TLauncher"#
+    match title=r#"^TLauncher%$"#
+
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+}

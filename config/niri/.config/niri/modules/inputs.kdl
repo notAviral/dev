@@ -1,0 +1,48 @@
+input {
+    keyboard {
+        // Keypress repeat settings
+        repeat-rate 25      // repeat-rate per minute
+        repeat-delay 250    // initial delay
+        // Xkeyboard settings
+        xkb {
+            layout "us"
+            options "compose:ralt,caps:ctrl_shifted_capslock"
+            // variant "colemak_dh_ortho"
+            // file "~/.config/keymap.xkb"
+        }
+        // enable numlock at boot
+        numlock
+    }
+
+    touchpad {
+        // off
+        tap         // tap to click
+        dwt         // disable while typeing
+        drag true   // tap and drag
+        natural-scroll
+        scroll-method "two-finger"
+        // dwtp
+        // drag-lock
+    }
+
+    mouse {
+        // off
+        // natural-scroll
+        scroll-method "no-scroll"
+    }
+
+    // Make the mouse warp to the center of newly focused windows.
+    warp-mouse-to-focus
+
+    // Focus windows and outputs automatically when moving the mouse into them.
+    // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
+    focus-follows-mouse max-scroll-amount="0%"
+}
+
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 5
+
+    hide-when-typing
+    hide-after-inactive-ms 5000
+}
